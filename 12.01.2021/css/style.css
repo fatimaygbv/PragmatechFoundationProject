@@ -1,0 +1,32 @@
+body{
+    color: black;
+}
+.Topbar {
+    display: flex;
+    height: 80px;
+    border: 1px solid grey;
+    margin-bottom: 10px;
+}
+.logo{
+    height: 60px;
+    text-align: center;
+    width: 30%;
+}
+.Menu ul {
+    list-style-type: none;
+    display: flex;
+}
+.Heading{
+    height: 15px !important;
+    width: 100%;
+    background: burlywood;
+    border: 3px double black;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.Text {
+    margin-top: 15px;
+}
