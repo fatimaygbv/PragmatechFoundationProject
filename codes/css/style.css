@@ -2,7 +2,7 @@ body{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
-.Topbar {
+#Topbar {
     display: flex;
     height: 80px;
     border: 1px solid grey;
@@ -29,7 +29,7 @@ li + li{
     margin-left: 20px;
 }
 .Heading {
-    height: 15px !important;;
+    height: 15px;
     text-align: center;
     padding: 20px;
     justify-content: center;
@@ -44,7 +44,7 @@ li + li{
     margin-top: 15px;
     margin: 80px;
 }
-.footer {
+.footer ul {
     border: 1px solid grey;
     background-color: burlywood;
     height: 30px;
@@ -52,4 +52,6 @@ li + li{
     display: flex;
     align-items: center;
     color: brown;
+    list-style-type: none;
+    font-size: 15px;
 }
