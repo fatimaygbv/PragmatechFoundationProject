@@ -1,6 +1,6 @@
 let cars=[]
-class Car{
-    constructor(_name,_model,_price){
+class Car {
+    constructor(_name,_model,_price) {
         this.Name=_name
         this.Model=_model
         this.Price=_price
@@ -8,9 +8,8 @@ class Car{
     showCarDetails(){
         console.log(this.Name + "," + this.Model + "," + this.Price)
     }
-
 }
-let car01=new Car('X5','BMW',50000)
+let car01=new Car('X5','BMW',50000) 
 let car02=new Car('X6','BMW',70000)
 let car03=new Car('Accent','Hundai',25000)
 let car04=new Car('Sonata','Hundai',30000)
@@ -30,22 +29,13 @@ function showCarByName(_carname){
     }
 }
 
-function showCarsByPrice(_carprice){
+function showCarByPrice(_carprice){
     for(let i=0;i<cars.length;i++){
         if(cars[i].Price>_carprice){
             cars[i].showCarDetails()
         }
     }
 }
-
-function showCarsByModel(_modelname){
-    for(let i=0;i<cars.length;i++){
-        if(cars[i].Model==_modelname){
-            cars[i].showCarDetails()
-        }
-    }
-}
-
 let charCount=0;
 function countChar(_word,_char){
 for(let i=0;i<_word.length;i++){
