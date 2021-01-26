@@ -1,32 +1,31 @@
 body{
-    color: black;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
 }
 #Topbar {
     display: flex;
     height: 80px;
-    border: 1px solid grey;
     margin-bottom: 10px;
-    margin-top: 15px;
-    background-color: burlywood;
+    background-color: darkblue;
 }
 .logo{
     height: 60px;
     text-align: center;
-    width: 40%;
-    color: brown;
+    width: 20%;
+    color: white;
+    margin-top: 10px;
 }
 .Menu ul {
     width: 60%;
     list-style-type: none;
     display: flex;
-    padding-left: 400px;
+    padding-left: 450px;
     margin-right: 20px;
-    color: brown;
+    color: white;
     display: flex;
 }
 li + li{
-    margin-left: 20px;
+    margin-left: 70px;
 }
 .Heading {
     height: 15px;
