@@ -1,0 +1,25 @@
+#navbar-top {
+    // width: 1349px;
+    height: 260px;
+    border: 2px solid black;
+}
+.navbar {
+    width: 1075px;
+    height: 162px;
+    padding-top: 80px;
+    margin: 0px auto;
+}
+.logo-icons {
+    display: flex;
+    justify-content: space-between;
+    transition: all 200ms linear;
+}
+.social {
+    justify-content: space-between;
+}
+.social ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
