@@ -1,25 +1,69 @@
 #navbar-top {
-    // width: 1349px;
+    width: 1350px;
     height: 260px;
     border: 2px solid black;
+    .navbar {
+        width: 1075px;
+        height: 162px;
+        padding-top: 80px;
+        margin: 0px auto;
+        transition: all 200ms linear;
+        .logo-icons {
+            display: flex;
+            justify-content: space-between;
+            .social {
+                justify-content: space-between;
+            }
+            .social ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+            }
+            .logo {
+                h1 {
+                    font-weight: 700;
+                    color: #242323;
+                    font-size: 60px;
+                    margin: 0px;
+                    font-family: "Josefin Sans",sans-serif;
+                    span {
+                        color: #FF486A;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .search {
+                background: pink;
+                height: 20px;
+                width: 15px;
+                border-radius: 50%;
+            }
+        }
+        .menu {
+            margin: 0px auto;
+            padding: 0px 270px;
+        }
+        .menu ul {
+            list-style: none;
+            display: flex;
+            cursor: pointer;
+        }
+        .menu ul li {
+            padding: 50px 20px;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 1.25;
+            color: #242323;
+            letter-spacing: 0.3px;
+            // font-weight: 500;
+            // font-family: $font-family
+        }
+        .menu ul li:hover {
+            color: #FF486A;
+        }
+    }
 }
-.navbar {
-    width: 1075px;
-    height: 162px;
-    padding-top: 80px;
-    margin: 0px auto;
-}
-.logo-icons {
-    display: flex;
-    justify-content: space-between;
-    transition: all 200ms linear;
-}
-.social {
-    justify-content: space-between;
-}
-.social ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-}
+
+
+
