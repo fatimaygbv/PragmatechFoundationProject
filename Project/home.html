@@ -6,6 +6,7 @@
     <script src="https://kit.fontawesome.com/52fe999af9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
             <div class="logo-icons">
                 <div class="social">
                     <ul>
-                        <li><i class="fab fa-facebook-f" style="color:#175BEB; font-size: 22px; width: 14px; height: 24px;"></i></li>
+                        <li><i class="fab fa-facebook-f" style="color:#175BEB; font-size: 22px; width: 14px; height: 24px; "></i></li>
                         <li><i class="fab fa-twitter" style="color: #1DA1F2; font-size: 22px; width: 14px; height: 24px;"></i></li>
                         <li><i class="fab fa-instagram" style="color:rgb(242,40,177); font-size: 22px; width: 14px; height: 24px;"></i></li>
                     </ul>
@@ -22,7 +23,9 @@
                 <div class="logo">
                     <h1>Veen<span>.</span></h1>
                 </div>
-                <div class="search"><i class="fas fa-search"></i></div>
+                <div class="search">
+                  <div class="search-icon"><i class="fas fa-search"></i></div>
+                </div>
             </div>
             <div class="menu">
                 <ul>
@@ -34,7 +37,188 @@
             </div>
         </div>
     </section>
-    <section id="slider"></section>
+    <section id="slider">
+      <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/1.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 500px;" style="object-fit:cover;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/2.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 500px;" style="object-fit:cover;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/3.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 500px;" style="object-fit:cover;">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="grid-container">
+      <div class="grid">
+        <div class="left-grid">
+          <div class="row">
+            <div class="grid-posts">
+              <div class="grid-item">
+                <div class="header">
+                  <div class="text"><h1>The spectacle before us was indeed sublime</h1></div>
+                  <img src="img/5.jpg" alt="">
+                </div>
+                <div class="author-date">
+                  <div class="author">
+                    <img src="img/author1.jpg" alt="">
+                    <span>Jonathan Doe</span>
+                  </div>
+                  <div class="date">
+                    <span>July 26, 2019</span>
+                  </div>
+                </div>
+                <div class="post-excerpt">
+                  <p>Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated…</p>
+                </div>
+                <div class="tag">
+                  <i class="fas fa-tag" style="color: #FF486A; ; height: 20px; width: 20px;"></i>
+                  <span>Lifestyle</span>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="header">
+                  <div class="text"><h1>Musical improvisation is the spontaneous music</h1></div>
+                  <img src="img/2.jpg" alt="">
+                </div>
+                <div class="author-date">
+                  <div class="author">
+                    <img src="img/author2.jpg" alt="">
+                    <span>Mary Buzard</span>
+                  </div>
+                  <div class="date">
+                    <span>July 26, 2019</span>
+                  </div>
+                </div>
+                <div class="post-excerpt">
+                  <p>It was one of the worst storms to hit London since God knows when. The thunder rolled,…</p>
+                </div>
+                <div class="tag">
+                  <i class="fas fa-tag" style="color: #FF486A; ; height: 20px; width: 20px;"></i>
+                  <span>Music</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid-posts">
+              <div class="grid-item">
+                <div class="header">
+                  <div class="text"><h1>The meaning of health has evolved over time</h1></div>
+                  <img src="img/6.jpg" alt="">
+                </div>
+                <div class="author-date">
+                  <div class="author">
+                    <img src="img/author1.jpg" alt="">
+                    <span>Jonathan Doe</span>
+                  </div>
+                  <div class="date">
+                    <span>July 26, 2019</span>
+                  </div>
+                </div>
+                <div class="post-excerpt">
+                  <p>In keeping with the biomedical perspective, early definitions of health focused on the theme of the body’s…</p>
+                </div>
+                <div class="tag">
+                  <i class="fas fa-tag" style="color: #FF486A; ; height: 20px; width: 20px;"></i>
+                  <span>Health</span>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="header">
+                  <div class="text"><h1>Apps & integrations</h1></div>
+                  <img src="img/7.jpg" alt="">
+                </div>
+                <div class="author-date">
+                  <div class="author">
+                    <img src="img/author1.jpg" alt="">
+                    <span>Jonathan Doe</span>
+                  </div>
+                  <div class="date">
+                    <span>July 25, 2019</span>
+                  </div>
+                </div>
+                <div class="post-excerpt">
+                  <p>There are three primary ways to work with third-party services in Ghost: using Zapier, editing your theme,…</p>
+                </div>
+                <div class="tag">
+                  <i class="fas fa-tag" style="color: #FF486A; ; height: 20px; width: 20px;"></i>
+                  <span>Technology</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid-posts">
+              <div class="grid-item">
+                <div class="header">
+                  <div class="text"><h1>3 ideas to keep you healthy and strong</h1></div>
+                  <img src="img/8.jpg" alt="">
+                </div>
+                <div class="author-date">
+                  <div class="author">
+                    <img src="img/author1.jpg" alt="">
+                    <span>Jonathan Doe</span>
+                  </div>
+                  <div class="date">
+                    <span>July 25, 2019</span>
+                  </div>
+                </div>
+                <div class="post-excerpt">
+                  <p>Achieving and maintaining health is an ongoing process, shaped by both the evolution of health care knowledge and practices…</p>
+                </div>
+                <div class="tag">
+                  <i class="fas fa-tag" style="color: #FF486A; ; height: 20px; width: 20px;"></i>
+                  <span>Health, Lifestyle</span>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="header">
+                  <div class="text"><h1>These Are The 10 Best Restaurants in The World</h1></div>
+                  <img src="img/9.jpg" alt="">
+                </div>
+                <div class="author-date">
+                  <div class="author">
+                    <img src="img/author1.jpg" alt="">
+                    <span>Jonathan Doe</span>
+                  </div>
+                  <div class="date">
+                    <span>July 25, 2019</span>
+                  </div>
+                </div>
+                <div class="post-excerpt">
+                  <p>Each year, fine diners, restaurateurs and food writers—I’m in the last group—try to read the annual World’s…</p>
+                </div>
+                <div class="tag">
+                  <i class="fas fa-tag" style="color: #FF486A; ; height: 20px; width: 20px;"></i>
+                  <span>Lifestyle</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-n">
+            <div class="nav">
+              <span class="page-number" style="padding: 0px 15px; margin: 0px 10px; color: #596172;">Page 1 of 2</span>
+              <button class="button" style="width: 76px; height: 36px; color: #fff; border-radius: 25px; background-color: #FF486A; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%);">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script></body>
 
-</body>
 </html>
