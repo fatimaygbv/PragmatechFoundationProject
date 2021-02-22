@@ -35,10 +35,10 @@
     - self hər obyektin atributları və metodları olmasına şərait yaradır.
 
 10. *args,*kwargs nədir? nə zaman istifadə olunur?
-    
+    - Funksiyaya dəyişənli və ya dəyişənsiz arqument ötürmək üçün istifadə olunur. 
 
 11. Python module nədir?
-
+    - Python modulu .py extension-lı olan fayllardır. İçində dəyişənlər, function-lar və s. olur. 
 
 12. Python package nədir?
 
