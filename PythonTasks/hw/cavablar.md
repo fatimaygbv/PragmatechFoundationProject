@@ -41,7 +41,7 @@
     - Python modulu .py extension-lı olan fayllardır. İçində dəyişənlər, function-lar və s. olur. 
 
 12. Python package nədir?
-
+    - Python modullarının meneceridir.
 
 13. pass nədir? Nə zaman istifadə olunur?
     - Kodu boş saxlayıb sonra yazmaq istəyiriksə pass istifadə edirik. Boş saxlayanda error verir. 
