@@ -44,13 +44,21 @@
 
 
 13. pass nədir? Nə zaman istifadə olunur?
-
+    - Kodu boş saxlayıb sonra yazmaq istəyiriksə pass istifadə edirik. Boş saxlayanda error verir. 
 
 14. List metodlarından 5 ədəd metodun izahatını yazın
-
+    - sort() - siyahını sıralayır.
+    - append() - siyahıya element əlavə etmək üçün istifadə olunur. 
+    - count() - hər hansı elementin sayını tapır.
+    - reverse() siyahını tərsinə çevirir.
+    - min,max - siyahıda ən böyük və ən kiçik ədədi tapır. 
 
 15. List və dict hansı hallarda istifadə olunur?
-
+    - Məlumatları siyahıya almaq lazım gəldikdə list, key value-larla əlavə etmək lazım gəldikdə dict istifadə olunur. 
 
 16. Dict metodlarından 5 ədəd metodun izahatını yazın
-
+    - clear() - dict-in bütün elementlərini silir.
+    - values() - dict-in value-larının listini qaytarır.
+    - pop() - verilən key ilə elementi silir.
+    - update() - verilən key ilə siyahını update edir. 
+    - get() - Verilən açarin dəyərini qaytarır. 
