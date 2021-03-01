@@ -140,7 +140,7 @@ body {
   color: #FF486A;
 }
 
-#slider .container .carousel-item .text {
+#slider .container .carousel-item .header {
   position: absolute;
   z-index: 2;
 }
@@ -212,9 +212,35 @@ body {
   margin: 0px auto;
   width: 362px;
   height: 68px;
+  margin-left: 20px;
 }
 
-#grid-container .grid .left-grid .grid-top .row .grid-posts .grid-item .header .text h1 {
+#grid-container .grid .left-grid .grid-top .row .grid-posts .grid-item .header .text .grid-icons {
+  width: 154px;
+  height: 34px;
+  right: 20px;
+  top: 25px;
+  z-index: 10;
+  background-color: #7169FE;
+  border-radius: 25px;
+  padding: 3px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#grid-container .grid .left-grid .grid-top .row .grid-posts .grid-item .header .text .grid-icons .comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 3px;
+}
+
+#grid-container .grid .left-grid .grid-top .row .grid-posts .grid-item .header .text .head-text {
+  background-color: white;
+}
+
+#grid-container .grid .left-grid .grid-top .row .grid-posts .grid-item .header .text .head-text h1 {
   border: 10px solid transparent;
   width: 339px;
   font-size: 24px;

@@ -117,7 +117,7 @@ body {
 #slider {
     .container {
         .carousel-item {
-            .text {
+            .header {
                 position: absolute;
                 z-index: 2;
             }
@@ -169,12 +169,43 @@ body {
                                     margin: 0px auto;
                                     width: 362px;
                                     height: 68px;
-                                    h1 {
-                                        border: 10px solid transparent;
-                                        width: 339px;
-                                        font-size: 24px;
-                                        font-weight: 700;
-                                        margin: 0px;
+                                    margin-left: 20px;
+                                    .grid-icons {
+                                        width: 154px;
+                                        height: 34px;
+                                        right: 20px;
+                                        top: 25px;
+                                        z-index: 10;
+                                        background-color: #7169FE;
+                                        border-radius: 25px;
+                                        padding: 4px 10px;
+                                        font-weight: 600; 
+                                        font-size: 14px; 
+                                        float: right; 
+                                        margin-top: 30px;
+                                        
+                                        .comments {
+                                            display: flex;
+                                            justify-content: space-around;
+                                            font-size: 13px;
+                                            margin: 5 3px;
+                                            text-shadow: 0px 2px 5px rgb(0 0 0 / 15%);
+                                            width: 33px;
+                                            height: 13px;
+                                            padding: 5px;
+                                        }
+
+                                    }
+                                    .head-text {
+                                        background-color: white;
+                                        
+                                        h1 {
+                                            border: 10px solid transparent;
+                                            width: 339px;
+                                            font-size: 24px;
+                                            font-weight: 700;
+                                            margin: 0px;
+                                        }
                                     }
                                 }
                                 img {
@@ -182,6 +213,7 @@ body {
                                     width: 422px;
                                     height: 400px;
                                     object-fit: cover;
+                                   
                                 }
                             }
                             .author-date {
@@ -564,7 +596,7 @@ body {
                     background-color: #FF486A;
                     color: white;
                     border: 0px;
-                    border-radius: 25%;
+                    border-radius: 25px;
                 }
             }
         }
