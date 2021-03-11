@@ -25,7 +25,6 @@ body {
             .social ul {
                 list-style: none;
                 display: flex;
-                cursor: pointer;
                 width: 135.28px;
                 height: 46px;
                 margin: 0px 5px;
@@ -40,8 +39,12 @@ body {
                 width: 38px;
                 height: 44px;
                 margin: 0px 2px;
-                transition: all 300ms ease;
+                &:hover {
+                    transition: all 300ms linear;
+                    cursor: pointer;
+                }
             }
+            
             .logo {
                 cursor: pointer;
                 font-family: "Josefin Sans",sans-serif;
@@ -55,6 +58,11 @@ body {
                     color: #242323;
                     font-size: 60px;
                     margin: 0px;
+                        a {
+                            font-style: none;
+                            text-decoration: none;
+                            color: #242323;
+                        }
                     }
                     span {
                         background-color: #FF486A;
@@ -79,6 +87,11 @@ body {
                     top: 87px;
                     padding: 11px 0px;
                     font-size: 16px;
+                    a {
+                        font-style: none;
+                        text-decoration: none;
+                        color: white;
+                    }
                 }
             }
         }
@@ -91,7 +104,6 @@ body {
             text-align: center;
             height: 60px;
             list-style: none;
-            cursor: pointer;
             margin: 0px auto;
             padding: 0px;
             
@@ -102,27 +114,130 @@ body {
             padding-right: 15px;
             margin-right: 20px;
             display: inline-block;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 1.25;
             color: #242323;
             letter-spacing: 0.5px;
-            font-weight: 600;
             font-family: "Josefin Sans",sans-serif;
-        }
-        .menu ul li:hover {
-            color: #FF486A;
+            a {
+                font-style: none;
+                text-decoration: none;
+                color: #242323;
+                font-size: 17px;
+                font-weight: 500;
+                &:hover {
+                    color: #FF486A;
+                    cursor: pointer;
+                    transition: all 300ms linear;
+                }
+            }
         }
     }
 } 
 #slider {
+    margin-top: 15px;
+    height: 570px;
     .container {
-        .carousel-item {
-            .header {
-                position: absolute;
-                z-index: 2;
-            }
-            img {
-                position: relative;
+        #carouselExampleControls {
+            .carousel-inner {
+                font-family: "Josefin Sans",sans-serif;
+                .carousel-item {
+                    position: relative;
+                    .blog-name {
+                        position: absolute;
+                        z-index: 1;
+                        height: 235px;
+                        width: 680px;
+                        background-color: white;
+                        opacity: 1;
+                        transition: all 600ms ease;
+                        padding: 25px 40px;
+                        text-align: center;
+                        margin: 0px 220px;
+                        margin-top: 250px;
+                        .info {
+                            height: 50px;
+                            .tag {
+                                a {
+                                    font-style: none;
+                                    text-decoration: none;
+                                    color: #242323;
+                                    &:hover {
+                                        transition: all 300ms ease;
+                                        color: #FF486A;
+                                    }
+                                }
+                            }
+                            a {
+                                font-style: none;
+                                text-decoration: none;
+                                color: #242323;
+                                h1 {
+                                    margin-top: 15px;
+                                    margin-bottom: 20px;
+                                    font-weight: 600;
+                                    &:hover {
+                                        color: #FF486A;
+                                        transition: all 300ms ease;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                            .author-date {
+                                color: #424851;
+                                height: 30px;
+                                margin: 0px auto;
+                                display: flex;
+                                justify-content: center;
+                                font-size: 17px;
+                                letter-spacing: 1px;
+                                font-weight: 600px;
+                                .author {
+                                    margin-right: 12px;
+                                    
+                                    a {
+                                        font-style: none;
+                                        text-decoration: none;
+                                        color: #242323;
+                                        &:hover {
+                                            color: #FF486A;
+                                            cursor: pointer;
+                                            transition: all 300ms ease;
+                                        }
+                                    }
+                                    img {
+                                        height: 30px;
+                                        width: 30px;
+                                        margin-right: 7px;
+                                        border-radius: 50%;
+                                    }
+                                }
+                                .date {
+                                    margin-top: 3px;
+                                    padding-left: 20px;
+                                    margin-right: 12px;
+                                }
+                                .min-read {
+                                    margin-top: 2px;
+                                    display: flex;
+                                    span {
+                                        background-color: #7169FE;
+                                        color: white;
+                                        border-radius: 50%;
+                                        width: 20px;
+                                        height: 20px;
+                                        text-align: center;
+                                        font-size: 16px;
+                                        margin-right: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    img {
+                        object-fit: cover;
+                    }
+                }
             }
         }
     }
@@ -155,6 +270,7 @@ body {
                         justify-content: space-between;
                         padding: 0px;
                         .grid-item {
+                            height: 660px;
                             width: 462px;
                             padding: 0px 20px;
                             padding-bottom: 50px;
@@ -170,41 +286,45 @@ body {
                                     width: 362px;
                                     height: 68px;
                                     margin-left: 20px;
-                                    .grid-icons {
-                                        width: 154px;
-                                        height: 34px;
-                                        right: 20px;
-                                        top: 25px;
-                                        z-index: 10;
-                                        background-color: #7169FE;
-                                        border-radius: 25px;
-                                        padding: 4px 10px;
-                                        font-weight: 600; 
-                                        font-size: 14px; 
-                                        float: right; 
-                                        margin-top: 30px;
-                                        
-                                        .comments {
-                                            display: flex;
-                                            justify-content: space-around;
-                                            font-size: 13px;
-                                            margin: 5 3px;
-                                            text-shadow: 0px 2px 5px rgb(0 0 0 / 15%);
-                                            width: 33px;
-                                            height: 13px;
-                                            padding: 5px;
-                                        }
-
-                                    }
-                                    .head-text {
-                                        background-color: white;
-                                        
+                                    background-color: white;
+                                    margin-top: 50px;
+                                    a {
+                                        font-style: none;
+                                        text-decoration: none;
+                                        color: #242323;
                                         h1 {
                                             border: 10px solid transparent;
                                             width: 339px;
                                             font-size: 24px;
                                             font-weight: 700;
                                             margin: 0px;
+                                            &:hover {
+                                                color: #FF486A;
+                                                transition: all 300ms ease;
+                                            }
+                                        }
+                                    }
+                                    .post-icons {
+                                        margin-top: 200px;
+                                        background-color: #7169FE;
+                                        float: right;
+                                        width: 148px;
+                                        height: 34px;
+                                        border-radius: 25px;
+                                        padding: 7px 10px;
+                                        top: 25px;
+                                        color: white;
+                                        display: flex;
+                                        font-size: 13px;
+                                        font-weight: 700;
+                                        justify-content: space-between;
+                                        .count-comments {
+                                            a {
+                                                font-style: none;
+                                                text-decoration: none;
+                                                color: white;
+                                                cursor: pointer;
+                                            }
                                         }
                                     }
                                 }
@@ -229,6 +349,15 @@ body {
                                     margin-right: 12px;
                                     cursor: pointer;
                                     font-weight: 500px;
+                                    a {
+                                        font-style: none;
+                                        text-decoration: none;
+                                        color: #242323;
+                                        &:hover {
+                                            color: #FF486A;
+                                            transition: all 300ms ease;
+                                        }
+                                    }
                                     img {
                                         height: 30px;
                                         width: 30px;
@@ -237,14 +366,15 @@ body {
                                     }
                                 }
                                 .date {
+                                    margin-top: 3px;
                                     padding-left: 20px;
                                     margin-right: 12px;
                                 }
                             }
                             .post-excerpt {
                                 width: 422px;
-                                height: 58px;
-                                margin: 25px 0;
+                                height: 65px;
+                                margin: 30px 0;
                                 text-align: center;
                                 color: #596172;
                             }
@@ -253,8 +383,15 @@ body {
                                 width: 422px;
                                 height: 27px;
                                 font-size: 15px;
-                                span {
+                                a {
+                                    font-style: none;
+                                    text-decoration: none;
                                     color: #242323;
+                                    cursor: pointer;
+                                    &:hover {
+                                        color: #FF486A;
+                                        transition: all 300ms ease;
+                                    }
                                 }
                             }
                         }
@@ -335,15 +472,23 @@ body {
                                 padding-top: 5px;
                                 width: 264px;
                                 height: 76px;
-                                h4 {
-                                    font-size: 15px;
-                                    letter-spacing: 0.25px;
-                                    font-weight: 600;
-                                    width: 237px;
-                                    height: 48px;
-                                    margin: 0px;
-                                    cursor: pointer;
-                                    line-height: 1.6;
+                                a {
+                                    font-style: none;
+                                    text-decoration: none;
+                                    color: #242323;
+                                    h4 {
+                                        font-size: 15px;
+                                        letter-spacing: 0.25px;
+                                        font-weight: 600;
+                                        width: 237px;
+                                        height: 48px;
+                                        margin: 0px;
+                                        cursor: pointer;
+                                        line-height: 1.6;
+                                        &:hover {
+                                            color: #FF486A;
+                                        }
+                                    }
                                 }
                                 .datetime {
                                     span {
@@ -399,6 +544,11 @@ body {
                             margin-right: 10px;
                             margin-bottom: 10px;
                             color: white;
+                            a {
+                                font-style: none;
+                                text-decoration: none;
+                                color: white;
+                            }
                         }
                     }
                     .archives {
@@ -423,7 +573,16 @@ body {
                         height: 39px;
                         padding-bottom: 8px;
                         margin-bottom: 8px;
-                        font-size: 14px;
+                        font-size: 15px;
+                        a {
+                            font-style: none;
+                            text-decoration: none;
+                            color: #596172;
+                            &:hover {
+                                color: #FF486A;
+                                transition: all 300ms ease;
+                            }
+                        }
                         span {
                             color: #fff;
                             background: #FF486A;
@@ -470,7 +629,7 @@ body {
                             }
                             p {
                                 font-weight: 600;
-                                font-size: 20px;
+                                font-size: 22px;
                             }
                         }
                         .fab {
@@ -481,6 +640,7 @@ body {
                         }
                     }
                     .ad {
+                        width: 364px;
                         height: 517px;
                         padding-bottom: 50px;
                         .title {
@@ -502,12 +662,16 @@ body {
                             margin-top: 20px;
                             }
                         }
-                        .img-cont {
+                        .img {
+                            margin: 0px auto;
                             height: 409px;
-                            background-image: url(/img/bg-subscribe.jpg);
+                            box-sizing: border-box;
+                            width: 250px;
+                            margin: 0px auto;
                             img {
-                                position: absolute;
                                 width: 240px;
+                                height: 400px;
+                                object-fit: cover;
                             }
                         }
                     }
@@ -519,6 +683,7 @@ body {
 #footer {
     height: 665px;
     margin-top: 50px;
+    font-family: "Josefin Sans",sans-serif;
     .subscribe {
         height: 118px;
         padding-top: 30px;
@@ -586,7 +751,7 @@ body {
                         }
                     }
                 }
-                .button {
+                button {
                     margin: 5px 0px;
                     width: 100px;
                     height: 45px;
@@ -596,7 +761,6 @@ body {
                     background-color: #FF486A;
                     color: white;
                     border: 0px;
-                    border-radius: 25px;
                 }
             }
         }
@@ -646,15 +810,24 @@ body {
                         padding-top: 5px;
                         width: 264px;
                         height: 76px;
-                        h4 {
-                            font-size: 15px;
-                            letter-spacing: 0.25px;
-                            font-weight: 700;
-                            width: 174px;
-                            height: 48px;
-                            margin: 0px;
-                            cursor: pointer;
-                            line-height: 1.6;
+                        a {
+                            font-style: none;
+                            text-decoration: none;
+                            color: #242323;
+                            h4 {
+                                font-size: 15px;
+                                letter-spacing: 0.25px;
+                                font-weight: 700;
+                                width: 174px;
+                                height: 48px;
+                                margin: 0px;
+                                cursor: pointer;
+                                line-height: 1.6;
+                                &:hover {
+                                    transition: all 300ms ease;
+                                    color: #FF486A;
+                                }
+                            }
                         }
                         .datetime {
                             span {
@@ -708,6 +881,11 @@ body {
                     margin-right: 10px;
                     margin-bottom: 10px;
                     color: white;
+                    a {
+                        font-style: none;
+                        text-decoration: none;
+                        color: white;
+                    }
                 }
             }
             .menu {
@@ -750,6 +928,11 @@ body {
                     color: rgb(98, 106, 122);
                     letter-spacing: 0.5px;
                     font-size: 14px;
+                    a {
+                        font-style: none;
+                        text-decoration: none;
+                        color: #596172;
+                    }
                 }
             }
             .gallery {
@@ -806,12 +989,17 @@ body {
                font-size: 24px;
                line-height: 1.2;
                margin: 0px 570px;
-               h2 {
-                font-weight: 700;
+               a {
+                font-style: none;
+                text-decoration: none;
                 color: #242323;
-                font-size: 60px;
-                margin: 0px;
-                }
+                h2 {
+                    font-weight: 700;
+                    color: #242323;
+                    font-size: 60px;
+                    margin: 0px;
+                    }
+            }
                 span {
                     background-color: #FF486A;
                     border-radius: 50%;
