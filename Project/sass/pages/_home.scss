@@ -717,7 +717,7 @@ body {
                         border-radius: 50%;
                         margin-left: 5px;
                         font-size: 15px;
-                        margin-top: 25px;
+                        margin-top: 21px;
                     }
                 } 
                 p {
@@ -740,27 +740,25 @@ body {
                         width: 318px;
                         height: 60px;
                         margin-right: 10px;
-                        p {
-                            background-color: white;
-                            color: #596172;
-                            padding: 12px 25px;
+                        .form-control {
                             border-radius: 25px;
-                            font-size: 14px;
-                            letter-spacing: 0.5px;
-                            height: 45px;
+                            padding: 7px 12px;
                         }
                     }
-                }
-                button {
-                    margin: 5px 0px;
-                    width: 100px;
-                    height: 45px;
-                    font-size: 15px;
-                    padding: 11px 25px;
-                    cursor: pointer;
-                    background-color: #FF486A;
-                    color: white;
-                    border: 0px;
+                    button {
+                        max-width: 27%;
+                        height: 45px;
+                        font-size: 15px;
+                        padding: 11px 25px;
+                        cursor: pointer;
+                        background-color: #FF486A;
+                        color: white;
+                        border: 0px;
+                        border-radius: 25px;
+                        margin-top: -5px;
+                        margin-left: 5px;
+                    }
+                    
                 }
             }
         }
