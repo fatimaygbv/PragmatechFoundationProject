@@ -134,8 +134,194 @@ body {
         }
     }
 }
+#container {
+    font-family: "Josefin Sans",sans-serif;
+    margin: 0px auto;
+    width: 1200px;
+    height: 720px;
+    padding: 0px 20px;
+    .grid {
+        margin-top: 50px;
+        display: flex;
+        width: 1200px;
+        .contact {
+            height: 720px;
+            padding-right: 20px;
+            float: left;
+            width: 70%;
+            .title {
+                display: flex;
+                h4 {
+                    font-size: 35px;
+                    line-height: 1.4;
+                    margin-bottom: 25px;
+                    font-weight: 700;
+                    letter-spacing: 0px;
+                    color: #242323;
+                }
+                span {
+                width: 5px;
+                height: 5px;
+                background-color: #FF486A;
+                border-radius: 50%;
+                margin-left: 5px;
+                margin-top: 30px;
+                }
+            }
+            .info {
+                font-size: 17px;
+                p {
+                    color: #596172;
+                    &:hover {
+                        color: #FF486A;
+                        transition: all 300ms ease;
+                        cursor: pointer;
+                    }
+                    a {
+                        text-decoration: none;
+                        font-style: none;
+                        color: #596172;
+                        &:hover {
+                            color: #FF486A;
+                            transition: all 300ms ease;
+                        }
+                    }
+                }
+                b {
+                    margin-right: 5px;
+                }
+            }
+            .form {
+                margin-top: 20px; 
+            }
+        }
+        .right-sidebar {
+            width: 404px;
+            padding: 0px 20px;
+            overflow: visible;
+            box-sizing: border-box;
+            .sidebar {
+                padding-top: 0px; 
+                padding-bottom: 1px;
+                height: 720px;
+                .sections {
+                    .popular-posts {
+                        width: 364px;
+                        height: 392px;
+                        padding-bottom: 30px;
+                        border-bottom: 1px solid #eee;
+                        margin-bottom: 50px;
+                        .title {
+                            display: flex;
+                            h4 {
+                                font-size: 24px;
+                                line-height: 1.4;
+                                margin-bottom: 25px;
+                                font-weight: 700;
+                                letter-spacing: 0px;
+                                color: #242323;
+                            }
+                            span {
+                            width: 5px;
+                            height: 5px;
+                            background-color: #FF486A;
+                            border-radius: 50%;
+                            margin-left: 5px;
+                            margin-top: 20px;
+                            }
+                        }
+                        .post {
+                            height: 81px;
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 20px;
+                            img {
+                                width: 80px;
+                                height: 80px;
+                                cursor: pointer;
+                                &:hover {
+                                    opacity: 0.6;
+                                    transition: all 600ms ease;
+                                }
+                            }
+                            .info {
+                                padding-top: 5px;
+                                width: 264px;
+                                height: 76px;
+                                a {
+                                    font-style: none;
+                                    text-decoration: none;
+                                    color: #242323;
+                                    h4 {
+                                        font-size: 15px;
+                                        letter-spacing: 0.25px;
+                                        font-weight: 600;
+                                        width: 237px;
+                                        height: 48px;
+                                        margin: 0px;
+                                        cursor: pointer;
+                                        line-height: 1.6;
+                                        &:hover {
+                                            color: #FF486A;
+                                        }
+                                    }
+                                }
+                                .datetime {
+                                    span {
+                                        font-size: 12px;
+                                        letter-spacing: 0.5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .social-profiles {
+                        height: 331px;
+                        margin-bottom: 50px;
+                        padding-bottom: 50px;
+                        border: none !important;
+                        h4 {
+                            font-size: 24px;
+                            line-height: 1.4;
+                            margin-bottom: 25px;
+                            font-weight: 700;
+                        }
+                    }
+                    .social-profiles ul {
+                        height: 212px;
+                        list-style: none;
+                        padding: 0px;
+                        margin: 0px;
+                    }
+                    .social-profiles ul li {
+                        color: white;
+                        height: 64px;
+                        padding-left: 40px;
+                        margin-bottom: 10px;
+                        .name {
+                            padding: 6px 0px;
+                            span {
+                                font-size: 12px;
+                            }
+                            p {
+                                font-weight: 600;
+                                font-size: 22px;
+                            }
+                        }
+                        .fab {
+                            line-height: 64px;
+                            font-size: 30px;
+                            width: 85px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
 #footer {
-    height: 665px;
+    height: 630px;
     margin-top: 50px;
     font-family: "Josefin Sans",sans-serif;
     .subscribe {
@@ -220,10 +406,14 @@ body {
     .widgets {
         height: 340px;
         padding: 0px 20px;
+        margin: 0px auto;
+        width: 1200px;
         .row {
             height: 340px;
             margin: 0px -35px;
             display: flex;
+            width: 1200px;
+            justify-content: space-between;
             .popular {
                 float: left;
                 width: 25%;
@@ -257,6 +447,10 @@ body {
                         height: 80px;
                         cursor: pointer;
                         margin-right: 20px;
+                        &:hover {
+                            opacity: 0.6;
+                            transition: all 600ms ease;
+                        }
                     }
                     .info {
                         padding-top: 5px;
@@ -287,56 +481,6 @@ body {
                                 letter-spacing: 0.5px;
                             }
                         }
-                    }
-                }
-            }
-            .tag-cloud {
-                width: 25%;
-                height: 340px;
-                padding: 50px 35px;
-                display: block;
-                .title {
-                    display: flex;
-                    h4 {
-                        font-size: 24px;
-                        line-height: 1.4;
-                        margin-bottom: 25px;
-                        font-weight: 700;
-                        letter-spacing: 0px;
-                        color: #242323;
-                    }
-                    span {
-                    width: 5px;
-                    height: 5px;
-                    background-color: #FF486A;
-                    border-radius: 50%;
-                    margin-left: 5px;
-                    margin-top: 20px;
-                    }
-                }
-                .cloud {
-                    width: 367px;
-                    height: 78px;
-                    margin-left: -3px;
-                    
-                }
-                .cloud ul {
-                    display: flex;
-                    list-style: none;
-                    padding: 0px;
-                    margin: 0px;
-                }
-                .cloud ul li {
-                    font-size: 14px;
-                    height: 29px;
-                    padding: 4px 12px;
-                    margin-right: 10px;
-                    margin-bottom: 10px;
-                    color: white;
-                    a {
-                        font-style: none;
-                        text-decoration: none;
-                        color: white;
                     }
                 }
             }
@@ -379,11 +523,12 @@ body {
                     border-bottom: 1px solid #eee;
                     color: rgb(98, 106, 122);
                     letter-spacing: 0.5px;
-                    font-size: 14px;
+                    
                     a {
                         font-style: none;
                         text-decoration: none;
                         color: #596172;
+                        font-size: 15px;
                     }
                 }
             }
@@ -423,6 +568,10 @@ body {
                     padding-left: 2px;
                     padding-right: 2px;
                     padding-bottom: 4px;
+                    &:hover {
+                        opacity: 0.6;
+                        transition: all 600ms ease;
+                    }
                 }
             }
         }
@@ -431,6 +580,7 @@ body {
     .logo-footer {
         height: 72px;
         margin: 20px;
+        margin-top: 0px;
         .logo {
             cursor: pointer;
             font-family: "Josefin Sans",sans-serif;
@@ -469,4 +619,4 @@ body {
             color: #596172;
         }
     }
-}   
+}    

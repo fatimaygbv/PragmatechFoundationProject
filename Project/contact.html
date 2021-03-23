@@ -35,12 +35,172 @@
         <div class="menu">
             <ul>
                 <li><a href="./home.html">Home</a></li>
-                <li><a href="./tags.html">#Tags</a></li>
-                <li><a href="./author.html">Authors</a></li>
+                <li><a href="./author.html">Author</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
+    </section>
+    <section id="container">
+      <div class="grid">
+        <div class="contact">
+          <div class="title">
+            <h4>Contact</h4>
+            <span></span>
+          </div>
+          <div class="form">
+            <section class="mb-4">
+              <p class="text-center w-responsive mx-auto mb-5" style="color: #596172;">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+                  a matter of hours to help you.</p>
+
+              <div class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-9 mb-md-0 mb-5">
+                      <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                          <!--Grid row-->
+                          <div class="row">
+
+                              <!--Grid column-->
+                              <div class="col-md-12">
+                                  <div class="md-form mb-0">
+                                      <input type="text" id="name" name="name" class="form-control">
+                                      <label for="name" class="" style="margin: 8px 0px;">Your name</label>
+                                  </div>
+                              </div>
+                              <!--Grid column-->
+
+                              <!--Grid column-->
+                              <div class="col-md-12">
+                                  <div class="md-form mb-0">
+                                      <input type="text" id="email" name="email" class="form-control">
+                                      <label for="email" class="" style="margin: 8px 0px;">Your email</label>
+                                  </div>
+                              </div>
+                              <!--Grid column-->
+
+                          </div>
+                          <!--Grid row-->
+
+                          <!--Grid row-->
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="md-form mb-0">
+                                      <input type="text" id="subject" name="subject" class="form-control">
+                                      <label for="subject" class="" style="margin: 8px 0px;">Subject</label>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--Grid row-->
+
+                          <!--Grid row-->
+                          <div class="row">
+
+                              <!--Grid column-->
+                              <div class="col-md-12">
+
+                                  <div class="md-form">
+                                      <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                      <label for="message" style="margin: 8px 0px;">Your message</label>
+                                  </div>
+
+                              </div>
+                          </div>
+                          <!--Grid row-->
+
+                      </form>
+
+                      <div class="text-center text-md-left">
+                          <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();" style="background-color: #FF486A; border-radius: 25px; margin-top: 20px; width: 65px; height: 40px;">Send</a>
+                      </div>
+                      <div class="status"></div>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-md-3 text-center">
+                      <ul class="list-unstyled mb-0">
+                          <li><i class="fas fa-map-marker-alt fa-2x" style="color: #FF486A;"></i>
+                              <p>San Francisco, CA 94126, USA</p>
+                          </li>
+
+                          <li><i class="fas fa-phone mt-4 fa-2x" style="color: #FF486A;"></i>
+                              <p><a href="callto:+ 01 234 567 89" style="text-decoration: none; font-style: none; color: #212529;">+ 01 234 567 89</a></p>
+                          </li>
+
+                          <li><i class="fas fa-envelope mt-4 fa-2x" style="color: #FF486A;"></i>
+                              <p><a href="mailto:info@yourdomain.com" style="text-decoration: none; font-style: none; color: #212529;">info@yourdomain.com</a></p>
+                          </li>
+                      </ul>
+                  </div>
+                  <!--Grid column-->
+
+              </div>
+
+            </section>
+<!--Section: Contact v.2-->
+          </div>
+        </div>
+        <div class="right-sidebar">
+          <div class="sidebar">
+            <div class="sections">
+              <div class="popular-posts">
+                <div class="title">
+                  <h4>Recent Posts</h4>
+                  <span></span>
+                </div>
+                <div class="post">
+                  <a href="./post.html"><img src="img/post1.jpg" alt=""></a>
+                  <div class="info">
+                    <a href="./post.html"><h4>3 ideas to keep you healthy and strong</h4></a>
+                    <div class="datetime">
+                      <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
+                      <span>July 25, 2019</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="post">
+                  <a href="#"><img src="img/post2.jpg" alt=""></a>
+                  <div class="info">
+                    <a href="#"><h4>Far far away, behind the word mountains</h4></a>
+                    <div class="datetime">
+                      <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
+                      <span>August 15, 2019</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="post">
+                  <a href="#"><img src="img/post3.jpg" alt=""></a>
+                  <div class="info">
+                    <a href="#"><h4>The spectacle before us was indeed sublime</h4></a>
+                    <div class="datetime">
+                      <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
+                      <span>July 26, 2019</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="social-profiles">
+                <h4>Social profiles</h4>
+                <ul>
+                  <a href="https://twitter.com/envato"><li style="background: #63CDF1;">
+                    <div class="name" style="float: left;"><p style="margin: 0px;">Twitter</p><span>Follow me!</span></div>
+                    <i class="fab fa-twitter" style="float: right;"></i>
+                  </li></a>
+                  <a href="http://www.facebook.com/envato"><li style="background: #507CBE;">
+                    <div class="name" style="float: left;"><p style="margin: 0px;">Facebook</p><span>Follow me!</span></div>
+                    <i class="fab fa-facebook-f" style="float: right;"></i>
+                  </li></a>
+                  <a href="https://instagram.com/envato"><li style="background: #D62976;">
+                    <div class="name" style="float: left;"><p style="margin: 0px;">Instagram</p><span>Our photos!</span></div>
+                    <i class="fab fa-instagram" style="float: right;"></i></li></a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="footer">
       <div class="subscribe">
@@ -92,24 +252,6 @@
               </div>
             </div>
           </div>
-          <div class="tag-cloud">
-            <div class="title">
-              <h4>Tag Cloud</h4>
-              <span></span>
-            </div>
-            <div class="cloud">
-              <ul>
-                <li style="background: #7169fe; width: 69px;"><a href="#">Health</a></li>
-                <li style="background: #FF486A; width: 81px;"><a href="#">Lifestyle</a></li>
-                <li style="background: #1cbfc3 ; width: 62px;"><a href="#">Music</a></li>
-              </ul>
-              <ul>
-                <li style="background: #fdd948; width: 98px;"><a href="#">Technology</a></li>
-                <li style="background: #8338ec; width: 65px;"><a href="#">Travel</a></li>
-                <li style="background: #fb0699; width: 63px;"><a href="#">Video</a></li>
-              </ul>
-            </div>
-          </div>
           <div class="menu">
             <div class="title">
               <h4>Menu</h4>
@@ -118,8 +260,7 @@
             <div class="menu-footer">
               <ul>
                 <li><a href="./home.html">Home</a></li>
-                <li><a href="./tags.html">Tags</a></li>
-                <li><a href="./author.html">Authors</a></li>
+                <li><a href="./author.html">Author</a></li>
                 <li><a href="./contact.html">Contact</a></li>
               </ul>
             </div>

@@ -157,17 +157,6 @@ body {
                         margin-top: 250px;
                         .info {
                             height: 50px;
-                            .tag {
-                                a {
-                                    font-style: none;
-                                    text-decoration: none;
-                                    color: #242323;
-                                    &:hover {
-                                        transition: all 300ms ease;
-                                        color: #FF486A;
-                                    }
-                                }
-                            }
                             a {
                                 font-style: none;
                                 text-decoration: none;
@@ -183,7 +172,7 @@ body {
                                     }
                                 }
                             }
-                            .author-date {
+                            .date-min {
                                 color: #424851;
                                 height: 30px;
                                 margin: 0px auto;
@@ -192,29 +181,9 @@ body {
                                 font-size: 17px;
                                 letter-spacing: 1px;
                                 font-weight: 600px;
-                                .author {
-                                    margin-right: 12px;
-                                    
-                                    a {
-                                        font-style: none;
-                                        text-decoration: none;
-                                        color: #242323;
-                                        &:hover {
-                                            color: #FF486A;
-                                            cursor: pointer;
-                                            transition: all 300ms ease;
-                                        }
-                                    }
-                                    img {
-                                        height: 30px;
-                                        width: 30px;
-                                        margin-right: 7px;
-                                        border-radius: 50%;
-                                    }
-                                }
                                 .date {
                                     margin-top: 3px;
-                                    padding-left: 20px;
+                                    padding-left: 10px;
                                     margin-right: 12px;
                                 }
                                 .min-read {
@@ -246,22 +215,22 @@ body {
     font-family: "Josefin Sans",sans-serif;
     margin: 0px;
     width: 1349px;
-    height: 2030px;
+    height: 1750px;
     padding: 0px 20px;
     .grid {
         width: 1349px;
-        height: 100%;
+        height: 1800px;
         margin: 0px -20px;
-        margin-top: 50px;
+        margin-top: 30px;
         display: flex;
         .left-grid {
             width: 70%;
-            height: 2081px;
+            height: 1800px;
             padding-right: 20px;
             float: left;
             .grid-top {
                 .row {
-                    height: 644px;
+                    height: 550px;
                     margin: 0px auto;
                     display: flex;
                     text-align: center;
@@ -270,34 +239,35 @@ body {
                         justify-content: space-between;
                         padding: 0px;
                         .grid-item {
-                            height: 660px;
+                            height: 600px;
                             width: 462px;
                             padding: 0px 20px;
                             padding-bottom: 50px;
                             .header {
                                 width: 422px;
                                 height: 400px;
-                                margin-bottom: 30px;
+                                margin-bottom: 20px;
                                 .text {
                                     position: absolute;
                                     z-index: 3;
                                     text-align: left;
                                     margin: 0px auto;
-                                    width: 362px;
+                                    width: 330px;
                                     height: 68px;
-                                    margin-left: 20px;
-                                    background-color: white;
+                                    margin-left: 44px;
                                     margin-top: 50px;
+                                    text-align: center;
                                     a {
                                         font-style: none;
                                         text-decoration: none;
                                         color: #242323;
                                         h1 {
                                             border: 10px solid transparent;
-                                            width: 339px;
+                                            // width: 339px;
                                             font-size: 24px;
                                             font-weight: 700;
                                             margin: 0px;
+                                            background-color: white;
                                             &:hover {
                                                 color: #FF486A;
                                                 transition: all 300ms ease;
@@ -333,48 +303,31 @@ body {
                                     width: 422px;
                                     height: 400px;
                                     object-fit: cover;
+                                    &:hover {
+                                        opacity: 0.6;
+                                        transition: all 600ms ease;
+                                    }
                                    
                                 }
                             }
-                            .author-date {
+                            .coma-date {
                                 color: #424851;
                                 width: 422px;
-                                height: 30px;
+                                height: 25px;
                                 margin: 0px auto;
                                 display: flex;
                                 justify-content: center;
-                                font-size: 15px;
+                                font-size: 14px;
                                 letter-spacing: 0.5px;
-                                .author {
-                                    margin-right: 12px;
-                                    cursor: pointer;
-                                    font-weight: 500px;
-                                    a {
-                                        font-style: none;
-                                        text-decoration: none;
-                                        color: #242323;
-                                        &:hover {
-                                            color: #FF486A;
-                                            transition: all 300ms ease;
-                                        }
-                                    }
-                                    img {
-                                        height: 30px;
-                                        width: 30px;
-                                        margin-right: 7px;
-                                        border-radius: 50%;
-                                    }
-                                }
                                 .date {
                                     margin-top: 3px;
-                                    padding-left: 20px;
-                                    margin-right: 12px;
+                                    padding-left: 10px;
                                 }
                             }
                             .post-excerpt {
                                 width: 422px;
                                 height: 65px;
-                                margin: 30px 0;
+                                margin: 15px 0;
                                 text-align: center;
                                 color: #596172;
                             }
@@ -401,7 +354,7 @@ body {
             .button-n {
                 width: 924px;
                 height: 96px;
-                padding: 30px 0px;
+                padding: 40px 0px;
                 font-size: 15px;
                 flex-wrap: nowrap;
                 .nav {
@@ -421,17 +374,11 @@ body {
         }
         .right-sidebar {
             width: 404px;
-            height: 2081px;
             padding: 0px 20px;
-            position: relative;
-            overflow: visible;
-            box-sizing: border-box;
             .sidebar {
                 padding-top: 0px; 
-                padding-bottom: 1px; 
-                position: static; 
-                transform: none; 
-                height: 1861px;
+                padding-bottom: 1px;
+                height: 1680px;
                 .sections {
                     .popular-posts {
                         width: 364px;
@@ -467,6 +414,10 @@ body {
                                 width: 80px;
                                 height: 80px;
                                 cursor: pointer;
+                                &:hover {
+                                    opacity: 0.6;
+                                    transition: all 600ms ease;
+                                }
                             }
                             .info {
                                 padding-top: 5px;
@@ -497,106 +448,6 @@ body {
                                     }
                                 }
                             }
-                        }
-                    }
-                    .tag-cloud {
-                        width: 364px;
-                        height: 187px;
-                        padding-bottom: 50px;
-                        margin-bottom: 50px;
-                        border-bottom: 1px solid #eee;
-                        display: block;
-                        .title {
-                            display: flex;
-                            h4 {
-                                font-size: 24px;
-                                line-height: 1.4;
-                                margin-bottom: 25px;
-                                font-weight: 700;
-                                letter-spacing: 0px;
-                                color: #242323;
-                            }
-                            span {
-                            width: 5px;
-                            height: 5px;
-                            background-color: #FF486A;
-                            border-radius: 50%;
-                            margin-left: 5px;
-                            margin-top: 20px;
-                            }
-                        }
-                        .cloud {
-                            width: 367px;
-                            height: 78px;
-                            margin-left: -3px;
-                            
-                        }
-                        .cloud ul {
-                            display: flex;
-                            list-style: none;
-                            padding: 0px;
-                            margin: 0px;
-                        }
-                        .cloud ul li {
-                            font-size: 14px;
-                            height: 29px;
-                            padding: 4px 12px;
-                            margin-right: 10px;
-                            margin-bottom: 10px;
-                            color: white;
-                            a {
-                                font-style: none;
-                                text-decoration: none;
-                                color: white;
-                            }
-                        }
-                    }
-                    .archives {
-                        height: 233px;
-                        width: 364px;
-                        padding-bottom: 50px;
-                        border-bottom: 1px solid #eee;
-                        margin-bottom: 50px;
-                        h4 {
-                            font-size: 24px;
-                            line-height: 1.4;
-                            margin-bottom: 25px;
-                            font-weight: 700;
-                        }
-                    }
-                    .archives ul {
-                        list-style: none;
-                        margin: 0px;
-                        padding: 0px;
-                    }
-                    .archives ul li {
-                        height: 39px;
-                        padding-bottom: 8px;
-                        margin-bottom: 8px;
-                        font-size: 15px;
-                        a {
-                            font-style: none;
-                            text-decoration: none;
-                            color: #596172;
-                            &:hover {
-                                color: #FF486A;
-                                transition: all 300ms ease;
-                            }
-                        }
-                        span {
-                            color: #fff;
-                            background: #FF486A;
-                            width: 25px;
-                            height: 25px;
-                            text-align: center;
-                            line-height: 25px;
-                            font-weight: 700;
-                            font-size: 13px;
-                            box-sizing: border-box;
-                            top: -2px;
-                            position: relative;
-                            border-radius: 50%;
-                            float: right;
                         }
                     }
                     .social-profiles {
@@ -681,7 +532,7 @@ body {
     }
 } 
 #footer {
-    height: 665px;
+    height: 630px;
     margin-top: 50px;
     font-family: "Josefin Sans",sans-serif;
     .subscribe {
@@ -766,10 +617,14 @@ body {
     .widgets {
         height: 340px;
         padding: 0px 20px;
+        margin: 0px auto;
+        width: 1200px;
         .row {
             height: 340px;
             margin: 0px -35px;
             display: flex;
+            width: 1200px;
+            justify-content: space-between;
             .popular {
                 float: left;
                 width: 25%;
@@ -803,6 +658,10 @@ body {
                         height: 80px;
                         cursor: pointer;
                         margin-right: 20px;
+                        &:hover {
+                            opacity: 0.6;
+                            transition: all 600ms ease;
+                        }
                     }
                     .info {
                         padding-top: 5px;
@@ -833,56 +692,6 @@ body {
                                 letter-spacing: 0.5px;
                             }
                         }
-                    }
-                }
-            }
-            .tag-cloud {
-                width: 25%;
-                height: 340px;
-                padding: 50px 35px;
-                display: block;
-                .title {
-                    display: flex;
-                    h4 {
-                        font-size: 24px;
-                        line-height: 1.4;
-                        margin-bottom: 25px;
-                        font-weight: 700;
-                        letter-spacing: 0px;
-                        color: #242323;
-                    }
-                    span {
-                    width: 5px;
-                    height: 5px;
-                    background-color: #FF486A;
-                    border-radius: 50%;
-                    margin-left: 5px;
-                    margin-top: 20px;
-                    }
-                }
-                .cloud {
-                    width: 367px;
-                    height: 78px;
-                    margin-left: -3px;
-                    
-                }
-                .cloud ul {
-                    display: flex;
-                    list-style: none;
-                    padding: 0px;
-                    margin: 0px;
-                }
-                .cloud ul li {
-                    font-size: 14px;
-                    height: 29px;
-                    padding: 4px 12px;
-                    margin-right: 10px;
-                    margin-bottom: 10px;
-                    color: white;
-                    a {
-                        font-style: none;
-                        text-decoration: none;
-                        color: white;
                     }
                 }
             }
@@ -925,11 +734,15 @@ body {
                     border-bottom: 1px solid #eee;
                     color: rgb(98, 106, 122);
                     letter-spacing: 0.5px;
-                    font-size: 14px;
                     a {
                         font-style: none;
                         text-decoration: none;
                         color: #596172;
+                        font-size: 15px;
+                        &:hover {
+                            color: #FF486A;
+                            transition: all 300ms ease;
+                        }
                     }
                 }
             }
@@ -969,6 +782,10 @@ body {
                     padding-left: 2px;
                     padding-right: 2px;
                     padding-bottom: 4px;
+                    &:hover {
+                        opacity: 0.6;
+                        transition: all 600ms ease;
+                    }
                 }
             }
         }
@@ -977,6 +794,7 @@ body {
     .logo-footer {
         height: 72px;
         margin: 20px;
+        margin-top: 0px;
         .logo {
             cursor: pointer;
             font-family: "Josefin Sans",sans-serif;
