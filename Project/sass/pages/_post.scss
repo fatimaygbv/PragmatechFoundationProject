@@ -296,39 +296,42 @@ body {
             }
         }
         .button {
-            width: 200px;
-            height: 50px;
+            // width: 200px;
+            // height: 50px;
             margin: 0px auto;
+            
             button {
                 font-style: none;
                 text-decoration: none;
                 color: white;
-                width: 210px;
+                width: 180px;
+                height: 50px;
                 font-size: 20px;
-                padding: 12px 25px;
+                margin-bottom: 15px;
                 background-color: #7169FE;
                 border-radius: 25px;
+                border: 0px;
+                margin-left: 275px;
+
             }
-            .collapse {
-                .card {
-                    .title {
-                        display: flex;
-                        h4 {
-                            font-size: 24px;
-                            line-height: 1.4;
-                            margin-bottom: 25px;
-                            font-weight: 700;
-                            letter-spacing: 0px;
-                            color: #242323;
-                        }
-                        span {
-                        width: 5px;
-                        height: 5px;
-                        background-color: #FF486A;
-                        border-radius: 50%;
-                        margin-left: 5px;
-                        margin-top: 20px;
-                        }
+            .myDIV {
+                .title {
+                    display: flex;
+                    h4 {
+                        font-size: 24px;
+                        line-height: 1.4;
+                        margin-bottom: 25px;
+                        font-weight: 700;
+                        letter-spacing: 0px;
+                        color: #242323;
+                    }
+                    span {
+                    width: 5px;
+                    height: 5px;
+                    background-color: #FF486A;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                    margin-top: 20px;
                     }
                 }
             }
@@ -580,6 +583,7 @@ body {
                         font-style: none;
                         text-decoration: none;
                         color: white;
+                        margin-top: 120px;
                         button {
                             width: 150px;
                             height: 35px;
@@ -590,7 +594,6 @@ body {
                             border: 0px;
                             border-radius: 25px;
                             margin-left: 15px;
-                            margin-top: 120px;
                             font-size: 17px;
                         }
                     }
@@ -606,6 +609,9 @@ body {
                             margin-top: 105px;
                             padding-left: 8px;
                             line-height: 1.5;
+                            &:hover {
+                                color: #FF486A;
+                            }
                         }
                     }
                 }

@@ -49,6 +49,7 @@ body {
                 cursor: pointer;
                 font-family: "Josefin Sans",sans-serif;
                 transition: all 300ms ease;
+                margin-left: 200px;
                .title {
                    display: flex;
                    font-size: 60px;
@@ -73,26 +74,6 @@ body {
                         margin-top: 45px;
                     }
                }
-            }
-            .search {
-                padding: 8px 0px;
-                .search-icon {
-                    cursor: pointer;
-                    color: white;
-                    background-color: #FF486A;;
-                    height: 44px;
-                    width: 44px;
-                    border-radius: 50%;
-                    text-align: center;
-                    top: 87px;
-                    padding: 11px 0px;
-                    font-size: 16px;
-                    a {
-                        font-style: none;
-                        text-decoration: none;
-                        color: white;
-                    }
-                }
             }
         }
         .menu {
@@ -215,17 +196,17 @@ body {
     font-family: "Josefin Sans",sans-serif;
     margin: 0px;
     width: 1349px;
-    height: 1750px;
+    height: auto;
     padding: 0px 20px;
     .grid {
         width: 1349px;
-        height: 1800px;
+        height: auto;
         margin: 0px -20px;
         margin-top: 30px;
         display: flex;
         .left-grid {
             width: 70%;
-            height: 1800px;
+            height: auto;
             padding-right: 20px;
             float: left;
             .grid-top {

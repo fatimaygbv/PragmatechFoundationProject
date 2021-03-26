@@ -67,6 +67,7 @@ body {
   font-family: "Josefin Sans",sans-serif;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
+  margin-left: 200px;
 }
 
 #navbar-top .navbar .logo-icons .logo .title {
@@ -97,29 +98,6 @@ body {
   height: 10px;
   margin-left: 5px;
   margin-top: 45px;
-}
-
-#navbar-top .navbar .logo-icons .search {
-  padding: 8px 0px;
-}
-
-#navbar-top .navbar .logo-icons .search .search-icon {
-  cursor: pointer;
-  color: white;
-  background-color: #FF486A;
-  height: 44px;
-  width: 44px;
-  border-radius: 50%;
-  text-align: center;
-  top: 87px;
-  padding: 11px 0px;
-  font-size: 16px;
-}
-
-#navbar-top .navbar .logo-icons .search .search-icon a {
-  font-style: none;
-  text-decoration: none;
-  color: white;
 }
 
 #navbar-top .navbar .menu {
@@ -263,13 +241,13 @@ body {
   font-family: "Josefin Sans",sans-serif;
   margin: 0px;
   width: 1349px;
-  height: 1750px;
+  height: auto;
   padding: 0px 20px;
 }
 
 #grid-container .grid {
   width: 1349px;
-  height: 1800px;
+  height: auto;
   margin: 0px -20px;
   margin-top: 30px;
   display: -webkit-box;
@@ -279,7 +257,7 @@ body {
 
 #grid-container .grid .left-grid {
   width: 70%;
-  height: 1800px;
+  height: auto;
   padding-right: 20px;
   float: left;
 }
@@ -1391,8 +1369,6 @@ body {
 }
 
 #post-container .text .button {
-  width: 200px;
-  height: 50px;
   margin: 0px auto;
 }
 
@@ -1400,20 +1376,23 @@ body {
   font-style: none;
   text-decoration: none;
   color: white;
-  width: 210px;
+  width: 180px;
+  height: 50px;
   font-size: 20px;
-  padding: 12px 25px;
+  margin-bottom: 15px;
   background-color: #7169FE;
   border-radius: 25px;
+  border: 0px;
+  margin-left: 275px;
 }
 
-#post-container .text .button .collapse .card .title {
+#post-container .text .button .myDIV .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#post-container .text .button .collapse .card .title h4 {
+#post-container .text .button .myDIV .title h4 {
   font-size: 24px;
   line-height: 1.4;
   margin-bottom: 25px;
@@ -1422,7 +1401,7 @@ body {
   color: #242323;
 }
 
-#post-container .text .button .collapse .card .title span {
+#post-container .text .button .myDIV .title span {
   width: 5px;
   height: 5px;
   background-color: #FF486A;
@@ -1740,6 +1719,7 @@ body {
   font-style: none;
   text-decoration: none;
   color: white;
+  margin-top: 120px;
 }
 
 #post-container .text .other .blog2 .name-btn .btn button {
@@ -1752,7 +1732,6 @@ body {
   border: 0px;
   border-radius: 25px;
   margin-left: 15px;
-  margin-top: 120px;
   font-size: 17px;
 }
 
@@ -1770,6 +1749,10 @@ body {
   margin-top: 105px;
   padding-left: 8px;
   line-height: 1.5;
+}
+
+#post-container .text .other .blog2 .name-btn a p:hover {
+  color: #FF486A;
 }
 
 #post-container .text .other .blog2 a img {

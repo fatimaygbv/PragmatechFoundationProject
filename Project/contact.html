@@ -29,7 +29,14 @@
               </div>
             </div>
             <div class="search">
-              <div class="search-icon"><a href="#"><i class="fas fa-search" style="margin-left: 2px;"></i></a></i></div>
+              <div class="input-group">
+                <div class="form-outline">
+                  <input type="search" id="form1" class="form-control" placeholder="Search" style="border-radius: 25px;">
+                </div>
+                <button type="button" class="btn btn-primary" style="background-color: #FF486A; border-color: #FF486A; border-radius: 50%; margin-left: 5px;">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
             </div>
         </div>
         <div class="menu">
@@ -65,8 +72,7 @@
                               <!--Grid column-->
                               <div class="col-md-12">
                                   <div class="md-form mb-0">
-                                      <input type="text" id="name" name="name" class="form-control">
-                                      <label for="name" class="" style="margin: 8px 0px;">Your name</label>
+                                      <input type="text" id="name" name="name" class="form-control" placeholder="Your name" style="margin-bottom: 15px;">
                                   </div>
                               </div>
                               <!--Grid column-->
@@ -74,8 +80,7 @@
                               <!--Grid column-->
                               <div class="col-md-12">
                                   <div class="md-form mb-0">
-                                      <input type="text" id="email" name="email" class="form-control">
-                                      <label for="email" class="" style="margin: 8px 0px;">Your email</label>
+                                      <input type="text" id="email" name="email" class="form-control" placeholder="Your email" style="margin-bottom: 15px;">
                                   </div>
                               </div>
                               <!--Grid column-->
@@ -87,8 +92,7 @@
                           <div class="row">
                               <div class="col-md-12">
                                   <div class="md-form mb-0">
-                                      <input type="text" id="subject" name="subject" class="form-control">
-                                      <label for="subject" class="" style="margin: 8px 0px;">Subject</label>
+                                      <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" style="margin-bottom: 15px;">
                                   </div>
                               </div>
                           </div>
@@ -101,8 +105,7 @@
                               <div class="col-md-12">
 
                                   <div class="md-form">
-                                      <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                      <label for="message" style="margin: 8px 0px;">Your message</label>
+                                      <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Your message" style="margin-bottom: 15px;"></textarea>
                                   </div>
 
                               </div>
@@ -112,7 +115,7 @@
                       </form>
 
                       <div class="text-center text-md-left">
-                          <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();" style="background-color: #FF486A; border-radius: 25px; margin-top: 20px; width: 65px; height: 40px;">Send</a>
+                          <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();" style="background-color: #FF486A; border-radius: 25px; margin-top: 20px; width: 65px; height: 40px; border: 0px; padding-top: 8px;">Send</a>
                       </div>
                       <div class="status"></div>
                   </div>
