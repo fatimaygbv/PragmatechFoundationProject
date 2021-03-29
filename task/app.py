@@ -1,66 +1,66 @@
 from flask import Flask,render_template,request,redirect
+from flask_sqlalchemy import SQLAlchemy
 
 app=Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database/data.db"
+db = SQLAlchemy(app)
 
-data=[
-    {
-        'id':1,
-        'title': 'Vilayət Eyvazov baş leytenantı rəis təyin etdi',
-        'content':""" 
-        Göygöl Rayon Yol Polis bölməsinə rəis təyin edilib. 
-        Oxu.Az xəbər verir ki, bununla bağlı Daxili İşlər naziri, general-polkovnik Vilayət Eyvazov əmr imzalayıb.
-        Əmrə əsasən, bu vəzifəyə baş leytenant Rəşad Məmişov təyin edilib.
-        Qeyd edək ki, Rəşad Məmişov daha əvvəl Daşkəsən rayonu Dövlət Yol Polisinin baş inspektoru vəzifəsində çalışıb.
-        """,
-        'img':'../static/img/1.jpg'
-    },
-    {
-        'id':2,
-        'title': 'BMT ilə Azərbaycan arasında əməkdaşlıq sənədi imzalanıb',
-        'content':"""Birləşmiş Millətlər Təşkilatı ilə Azərbaycan arasında əməkdaşlıq müqaviləsi imzalanıb.Baku TV mərasimdən videonu təqdim edir:
-        """,
-        'img':'../static/img/2.jpg'
-    },
-    {
-        'id':3,
-        'title': 'Qlobalistlər Ağ Evə qayıtdılar, Türkiyə necə davranacaq?',
-        'content':"""İndi Türkiyənin birmənalı geosiyasi vektorundan danışmaq çətindi, ölkə NATO-nun üzvü olaraq qalır. Ancaq fərqli mövqe tutmağa və Şərqdə alternativ sivilizasiya qütbünün formalaşmasına meyllər var.
-        """,
-        'img':'../static/img/3.jpg'
-    }
-]
+class User(db.Model):
+    id=db.Column(db.Integer,primary_key=True)
+    name=db.Column(db.String(50))
+    surname=db.Column(db.String(50))
+    email=db.Column(db.String(50))
+    details=db.Column(db.String(250))
 
-users=[]
-id=1
 @app.route('/')
-def index():
-    return render_template('index.html',data=data)
+def home():
+    return render_template('home.html')
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-@app.route('/users', methods=['GET', 'POST'])
-def user():
-    global id
+@app.route('/new',methods=['GET','POST'])
+def new():
     if request.method=='POST':
-        ad=request.form['name']
-        soyad=request.form['surname']
-        id+=1
-        users.append({
-            'id':id,
-            'name':ad,
-            'surname':soyad
-        })
-        return render_template('users.html',userlist=users)
-    return render_template('users.html')
+        name=request.form['user_name']
+        surname=request.form['user_surname']
+        email=request.form['user_email']
+        details=request.form['user_detail']
+        user=User(name=name, surname=surname, email=email, details=details)
+        db.session.add(user)
+        db.session.commit()
+        return redirect('/users')
+    return render_template('new.10.02.html')
 
-@app.route('/delete/<int:id>',methods=['GET', 'POST'])
+@app.route("/delete/<id>")
 def delete(id):
-    for item in users:
-        if item['id']==id:
-            users.remove(item)
-            return redirect('/users')
-    return render_template('users.html')
+    userforDelete=User.query.get(id)
+    db.session.delete(userforDelete)
+    db.session.commit()
+    return redirect('/users')
+
+@app.route('/detail/<id>')
+def detail(id):
+    userForShow=User.query.get(id)
+    return render_template('detail.html',user=userForShow)
+
+@app.route('/update/<id>',methods=['GET','POST'])
+def update(id):
+    userForUpdate=User.query.get(id)
+    if request.method=='POST':
+        name=request.form['user_name']
+        surname=request.form['user_surname']
+        email=request.form['user_email']
+        details=request.form['user_detail']
+        userForUpdate.name=name
+        userForUpdate.surname=surname
+        userForUpdate.email=email
+        userForUpdate.details=details
+        db.session.commit()
+        return redirect('/users')
+    return render_template('update.html',user=userForUpdate)
+
+@app.route('/users')
+def users():
+    allUsers=User.query.all()
+    return render_template('users-10.02.html', users=allUsers)        
+
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run(debug=True) 
