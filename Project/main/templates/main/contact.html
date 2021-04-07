@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/52fe999af9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+    <title>Contact</title>
+</head>
+<body>
+    <section id="navbar-top">
+    <div class="navbar">
+        <div class="logo-icons">
+            <div class="social">
+                <ul>
+                    <li><a href="https://www.facebook.com/envato"><i class="fab fa-facebook-f" style="color:#175BEB; font-size: 22px; width: 14px; height: 24px; "></i></a></li>
+                    <li><a href="https://twitter.com/envato"><i class="fab fa-twitter" style="color: #1DA1F2; font-size: 22px; width: 14px; height: 24px;"></i></a></li>
+                    <li><a href="https://instagram.com/envato"><i class="fab fa-instagram" style="color:rgb(242,40,177); font-size: 22px; width: 14px; height: 24px;"></i></a></li>
+                </ul>
+            </div>
+            <div class="logo">
+              <div class="title">
+                <h1><a href="./home.html">Veen</a></h1>
+                <span></span>
+              </div>
+            </div>
+            <div class="search">
+              <div class="input-group">
+                <div class="form-outline">
+                  <input type="search" id="form1" class="form-control" placeholder="Search" style="border-radius: 25px;">
+                </div>
+                <button type="button" class="btn btn-primary" style="background-color: #FF486A; border-color: #FF486A; border-radius: 50%; margin-left: 5px;">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./author.html">Author</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    </section>
+    <section id="container">
+      <div class="grid">
+        <div class="contact">
+          <div class="title">
+            <h4>Contact</h4>
+            <span></span>
+          </div>
+          <div class="form">
+            <section class="mb-4">
+              <p class="text-center w-responsive mx-auto mb-5" style="color: #596172;">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+                  a matter of hours to help you.</p>
+
+              <div class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-9 mb-md-0 mb-5">
+                      <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                          <!--Grid row-->
+                          <div class="row">
+
+                              <!--Grid column-->
+                              <div class="col-md-12">
+                                  <div class="md-form mb-0">
+                                      <input type="text" id="name" name="name" class="form-control" placeholder="Your name" style="margin-bottom: 15px;">
+                                  </div>
+                              </div>
+                              <!--Grid column-->
+
+                              <!--Grid column-->
+                              <div class="col-md-12">
+                                  <div class="md-form mb-0">
+                                      <input type="text" id="email" name="email" class="form-control" placeholder="Your email" style="margin-bottom: 15px;">
+                                  </div>
+                              </div>
+                              <!--Grid column-->
+
+                          </div>
+                          <!--Grid row-->
+
+                          <!--Grid row-->
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="md-form mb-0">
+                                      <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" style="margin-bottom: 15px;">
+                                  </div>
+                              </div>
+                          </div>
+                          <!--Grid row-->
+
+                          <!--Grid row-->
+                          <div class="row">
+
+                              <!--Grid column-->
+                              <div class="col-md-12">
+
+                                  <div class="md-form">
+                                      <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Your message" style="margin-bottom: 15px;"></textarea>
+                                  </div>
+
+                              </div>
+                          </div>
+                          <!--Grid row-->
+
+                      </form>
+
+                      <div class="text-center text-md-left">
+                          <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();" style="background-color: #FF486A; border-radius: 25px; margin-top: 20px; width: 65px; height: 40px; border: 0px; padding-top: 8px;">Send</a>
+                      </div>
+                      <div class="status"></div>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-md-3 text-center">
+                      <ul class="list-unstyled mb-0">
+                          <li><i class="fas fa-map-marker-alt fa-2x" style="color: #FF486A;"></i>
+                              <p>San Francisco, CA 94126, USA</p>
+                          </li>
+
+                          <li><i class="fas fa-phone mt-4 fa-2x" style="color: #FF486A;"></i>
+                              <p><a href="callto:+ 01 234 567 89" style="text-decoration: none; font-style: none; color: #212529;">+ 01 234 567 89</a></p>
+                          </li>
+
+                          <li><i class="fas fa-envelope mt-4 fa-2x" style="color: #FF486A;"></i>
+                              <p><a href="mailto:info@yourdomain.com" style="text-decoration: none; font-style: none; color: #212529;">info@yourdomain.com</a></p>
+                          </li>
+                      </ul>
+                  </div>
+                  <!--Grid column-->
+
+              </div>
+
+            </section>
+<!--Section: Contact v.2-->
+          </div>
+        </div>
+        <div class="right-sidebar">
+          <div class="sidebar">
+            <div class="sections">
+              <div class="popular-posts">
+                <div class="title">
+                  <h4>Recent Posts</h4>
+                  <span></span>
+                </div>
+                <div class="post">
+                  <a href="./post.html"><img src="img/post1.jpg" alt=""></a>
+                  <div class="info">
+                    <a href="./post.html"><h4>3 ideas to keep you healthy and strong</h4></a>
+                    <div class="datetime">
+                      <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
+                      <span>July 25, 2019</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="post">
+                  <a href="#"><img src="img/post2.jpg" alt=""></a>
+                  <div class="info">
+                    <a href="#"><h4>Far far away, behind the word mountains</h4></a>
+                    <div class="datetime">
+                      <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
+                      <span>August 15, 2019</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="post">
+                  <a href="#"><img src="img/post3.jpg" alt=""></a>
+                  <div class="info">
+                    <a href="#"><h4>The spectacle before us was indeed sublime</h4></a>
+                    <div class="datetime">
+                      <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
+                      <span>July 26, 2019</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="social-profiles">
+                <h4>Social profiles</h4>
+                <ul>
+                  <a href="https://twitter.com/envato"><li style="background: #63CDF1;">
+                    <div class="name" style="float: left;"><p style="margin: 0px;">Twitter</p><span>Follow me!</span></div>
+                    <i class="fab fa-twitter" style="float: right;"></i>
+                  </li></a>
+                  <a href="http://www.facebook.com/envato"><li style="background: #507CBE;">
+                    <div class="name" style="float: left;"><p style="margin: 0px;">Facebook</p><span>Follow me!</span></div>
+                    <i class="fab fa-facebook-f" style="float: right;"></i>
+                  </li></a>
+                  <a href="https://instagram.com/envato"><li style="background: #D62976;">
+                    <div class="name" style="float: left;"><p style="margin: 0px;">Instagram</p><span>Our photos!</span></div>
+                    <i class="fab fa-instagram" style="float: right;"></i></li></a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="subscribe">
+        <div class="content">
+          <div class="text">
+            <div class="title">
+              <h4>Subscribe to Veen</h4>
+              <span></span>
+            </div>
+            <p>Get the latest posts delivered right to your email.</p>
+          </div> 
+          <div class="email">
+            <div class="form">
+              <form style="display: flex;">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class="widgets">
+        <div class="row">
+          <div class="popular">
+            <div class="title">
+              <h4>Popular Posts</h4>
+              <span></span>
+            </div>
+            <div class="post">
+              <a href="#"><img src="img/post1.jpg" alt=""></a>
+              <div class="info">
+                <a href="#"><h4>3 ideas to keep you healthy and strong</h4></a>
+                <div class="datetime">
+                  <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
+                  <span>July 25, 2019</span>
+                </div>
+              </div>
+            </div>
+            <div class="post">
+              <a href="#"><img src="img/post2.jpg" alt=""></a>
+              <div class="info">
+                <a href="#"><h4>Far far away, behind the word mountains</h4></a>
+                <div class="datetime">
+                  <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
+                  <span>August 15, 2019</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu">
+            <div class="title">
+              <h4>Menu</h4>
+              <span></span>
+            </div>
+            <div class="menu-footer">
+              <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./author.html">Author</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="gallery">
+            <div class="title">
+              <h4>Gallery</h4>
+              <span></span>
+            </div>
+            <div class="imgs">
+              <ul>
+                <li>
+                  <a href="./img/gallery1.jpg"><img src="img/gallery1.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="./img/gallery2.jpg"><img src="img/gallery2.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="./img/4.jpg"><img src="img/4.jpg" alt=""></a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="./img/gallery4.jpg"><img src="img/gallery4.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="./img/gallery5.jpg"><img src="img/gallery5.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="./img/post3.jpg"><img src="img/post3.jpg" alt=""></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logo-footer">
+        <div class="logo">
+          <div class="title">
+            <a href="./home.html"><h2>Veen</h2></a>
+            <span></span>
+          </div>
+        </div>
+        <div class="rights">
+          <p>© 2021 Veen. All rights reserved.</p>
+        </div>
+      </div>
+    </section>
+</body>
+</html>
