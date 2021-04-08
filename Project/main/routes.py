@@ -1,7 +1,7 @@
 # main
-from main import app
-from flask import Blueprint,render_template,render_template, request,url_for,flash
-import models
+from main import app,db
+from flask import Blueprint,render_template,request,url_for,flash,redirect
+from models import *
 
 @app.route("/")
 def main():
@@ -26,10 +26,8 @@ def contact():
         email=request.form['email']
         subject=request.form['subject']
         message=request.form['message']
-        response=Responses(name=name, email=email, subject=subject, message=message)
-        db.session.add(response)
+        contact=Contact(name=name, email=email, subject=subject, message=message)
+        db.session.add(contact)
         db.session.commit()
-        return redirect('main/contact.html')
+        return redirect('/contact')
     return render_template('main/contact.html')  
-
-import models    

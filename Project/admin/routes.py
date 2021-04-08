@@ -1,13 +1,14 @@
 # admin
-
+import main
 from flask import Blueprint,render_template
-
+# from models import *
 
 admin_bp=Blueprint('admin',__name__,template_folder='templates',static_folder='static',url_prefix='/admin')
 
 @admin_bp.route("/")
 def admin():
-    return render_template('admin/base.html')
+    AllResponses=Contact.query.all()
+    return render_template('admin/base.html',ctc=AllResponses)
 
 @admin_bp.route("/blogs")
 def admin_blogs():
@@ -24,7 +25,14 @@ def admin_comments():
 @admin_bp.route("/contact-form")
 def admin_contact_form():
     AllResponses=Contact.query.all()
-    return render_template('admin/contact-form.html',reponses=AllResponses)  
+    return render_template('admin/contact-form.html',ctc=AllResponses)  
+
+# @admin_bp.route("/delete/<id>")
+# def delete(id):
+#     responseforDelete=Contact.query.get(id)
+#     db.session.delete(responseforDelete)
+#     db.session.commit()
+#     return redirect('main/contact-form')    
 
 @admin_bp.route("/ads")
 def admin_ads():
@@ -32,6 +40,7 @@ def admin_ads():
 
 @admin_bp.route("/new-ad")
 def admin_new_ad():
-    return render_template('admin/new_ad.html')          
+    return render_template('admin/new_ad.html')    
 
-import models               
+    
+import models                     
