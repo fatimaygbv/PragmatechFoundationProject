@@ -1,182 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/52fe999af9.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/grid.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
-    <title>Author</title>
-</head>
-<body>
-    <section id="navbar-top">
-    <div class="navbar">
-        <div class="logo-icons">
-            <div class="social">
-                <ul>
-                    <li><a href="https://www.facebook.com/envato"><i class="fab fa-facebook-f" style="color:#175BEB; font-size: 22px; width: 14px; height: 24px; "></i></a></li>
-                    <li><a href="https://twitter.com/envato"><i class="fab fa-twitter" style="color: #1DA1F2; font-size: 22px; width: 14px; height: 24px;"></i></a></li>
-                    <li><a href="https://instagram.com/envato"><i class="fab fa-instagram" style="color:rgb(242,40,177); font-size: 22px; width: 14px; height: 24px;"></i></a></li>
-                </ul>
-            </div>
-            <div class="logo">
-              <div class="title">
-                <h1><a href="./home.html">Veen</a></h1>
-                <span></span>
-              </div>
-            </div>
-            <div class="search">
-              <div class="input-group">
-                <div class="form-outline">
-                  <input type="search" id="form1" class="form-control" placeholder="Search" style="border-radius: 25px;">
-                </div>
-                <button type="button" class="btn btn-primary" style="background-color: #FF486A; border-color: #FF486A; border-radius: 50%; margin-left: 5px;">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </div>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="./home.html">Home</a></li>
-                <li><a href="./author.html">Author</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </div>
+{% extends 'main/base.html' %} 
+
+
+{% block title %}
+<title>Author</title>
+{% endblock title %}
+  
+
+{% block page %}
+
+<section id="author">
+  <div class="about">
+    <div class="name">
+        <a href="#"><span>Jonathan Doe</span></a>
+      <span style="background-color: #FF486A; border-radius: 50%; height: 4px; width: 4px; margin-top: 15px; margin-left: 10px;"></span>
+      <p>8 articles</p>
+      <ul>
+        <li ><a href="./home.html" style="color: #FF486A;"><i class="fab fa-firefox-browser"></i></a></li>
+        <li><a href="https://twitter.com/wordpress" style="color: #00ACED;"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="http://www.facebook.com/estudiopatagon" style="color: #175BEB;"><i class="fab fa-facebook-f"></i></a></li>
+      </ul>
     </div>
-    </section>
-    <section id="author">
-      <div class="about">
-        <div class="name">
-            <a href="#"><span>Jonathan Doe</span></a>
-          <span style="background-color: #FF486A; border-radius: 50%; height: 4px; width: 4px; margin-top: 15px; margin-left: 10px;"></span>
-          <p>8 articles</p>
-          <ul>
-            <li ><a href="./home.html" style="color: #FF486A;"><i class="fab fa-firefox-browser"></i></a></li>
-            <li><a href="https://twitter.com/wordpress" style="color: #00ACED;"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="http://www.facebook.com/estudiopatagon" style="color: #175BEB;"><i class="fab fa-facebook-f"></i></a></li>
-          </ul>
-        </div>
-        <div class="img-text">
-          <a href="#"><img src="./img/author1.jpg" alt=""></a>
-          <div class="text">
-            <p>We are a team working from Chile. We create some Ghost and Wordpress themes for differents markets, also, we offer live support via our ticket system.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolor labore distinctio, optio commodi at libero ratione laborum perspiciatis itaque error corrupti nulla dicta quasi et dolorum cumque a voluptate!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla at ab, assumenda itaque optio fugit voluptate accusamus et expedita repellendus amet laboriosam accusantium dolore vel aliquid. Totam adipisci quae a?</p>
-          </div>
-        </div>
+    <div class="img-text">
+      <a href="#"><img src="././static/img/author1.jpg" alt=""></a>
+      <div class="text">
+        <p>We are a team working from Chile. We create some Ghost and Wordpress themes for differents markets, also, we offer live support via our ticket system.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolor labore distinctio, optio commodi at libero ratione laborum perspiciatis itaque error corrupti nulla dicta quasi et dolorum cumque a voluptate!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla at ab, assumenda itaque optio fugit voluptate accusamus et expedita repellendus amet laboriosam accusantium dolore vel aliquid. Totam adipisci quae a?</p>
       </div>
-      <div class="separator"></div>
-    </section>
-    <section id="footer">
-      <div class="subscribe">
-        <div class="content">
-          <div class="text">
-            <div class="title">
-              <h4>Subscribe to Veen</h4>
-              <span></span>
-            </div>
-            <p>Get the latest posts delivered right to your email.</p>
-          </div> 
-          <div class="email">
-            <div class="form">
-              <form style="display: flex;">
-                <div class="form-group">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
-          </div> 
-        </div>
-      </div>
-      <div class="widgets">
-        <div class="row">
-          <div class="popular">
-            <div class="title">
-              <h4>Popular Posts</h4>
-              <span></span>
-            </div>
-            <div class="post">
-              <a href="#"><img src="img/post1.jpg" alt=""></a>
-              <div class="info">
-                <a href="#"><h4>3 ideas to keep you healthy and strong</h4></a>
-                <div class="datetime">
-                  <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
-                  <span>July 25, 2019</span>
-                </div>
-              </div>
-            </div>
-            <div class="post">
-              <a href="#"><img src="img/post2.jpg" alt=""></a>
-              <div class="info">
-                <a href="#"><h4>Far far away, behind the word mountains</h4></a>
-                <div class="datetime">
-                  <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
-                  <span>August 15, 2019</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="menu">
-            <div class="title">
-              <h4>Menu</h4>
-              <span></span>
-            </div>
-            <div class="menu-footer">
-              <ul>
-                <li><a href="./home.html">Home</a></li>
-                <li><a href="./author.html">Author</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="gallery">
-            <div class="title">
-              <h4>Gallery</h4>
-              <span></span>
-            </div>
-            <div class="imgs">
-              <ul>
-                <li>
-                  <a href="./img/gallery1.jpg"><img src="img/gallery1.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="./img/gallery2.jpg"><img src="img/gallery2.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="./img/4.jpg"><img src="img/4.jpg" alt=""></a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="./img/gallery4.jpg"><img src="img/gallery4.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="./img/gallery5.jpg"><img src="img/gallery5.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="./img/post3.jpg"><img src="img/post3.jpg" alt=""></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="logo-footer">
-        <div class="logo">
-          <div class="title">
-            <a href="./home.html"><h2>Veen</h2></a>
-            <span></span>
-          </div>
-        </div>
-        <div class="rights">
-          <p>© 2021 Veen. All rights reserved.</p>
-        </div>
-      </div>
-    </section>
-</body>
-</html>
+    </div>
+  </div>
+  <div class="separator"></div>
+</section>
+{% endblock page %}

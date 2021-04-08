@@ -1,344 +1,199 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/52fe999af9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
-    <title>3 ideas to keep you healthy and strong</title>
-</head>
-<body>
-    <section id="navbar-top">
-    <div class="navbar">
-        <div class="logo-icons">
-            <div class="social">
-                <ul>
-                    <li><a href="https://www.facebook.com/envato"><i class="fab fa-facebook-f" style="color:#175BEB; font-size: 22px; width: 14px; height: 24px; "></i></a></li>
-                    <li><a href="https://twitter.com/envato"><i class="fab fa-twitter" style="color: #1DA1F2; font-size: 22px; width: 14px; height: 24px;"></i></a></li>
-                    <li><a href="https://instagram.com/envato"><i class="fab fa-instagram" style="color:rgb(242,40,177); font-size: 22px; width: 14px; height: 24px;"></i></a></li>
-                </ul>
-            </div>
-            <div class="logo">
-              <div class="title">
-                <h1><a href="./home.html">Veen</a></h1>
-                <span></span>
-              </div>
-            </div>
-            <div class="search">
-              <div class="input-group">
-                <div class="form-outline">
-                  <input type="search" id="form1" class="form-control" placeholder="Search" style="border-radius: 25px;">
-                </div>
-                <button type="button" class="btn btn-primary" style="background-color: #FF486A; border-color: #FF486A; border-radius: 50%; margin-left: 5px; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%);">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </div>
+{% extends 'main/home.html' %}
+
+
+{% block title %}
+<title>3 ideas to keep you healthy and strong</title>
+{% endblock title %}
+
+
+{% block page %}
+<section id="post-container">
+  <div class="header">
+    <div class="text">
+      <h1>3 ideas to keep you healthy and strong</h1>
+      <div class="post-icons">
+        <div class="count-comments">
+          <a href="#"><i class="fas fa-comment"></i>
+            <span>0</span></a>
         </div>
-        <div class="menu">
-            <ul>
-                <li><a href="./home.html">Home</a></li>
-                <li><a href="./author.html">Author</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-    </section>
-    <section id="post-container">
-      <div class="header">
-        <div class="text">
-          <h1>3 ideas to keep you healthy and strong</h1>
-          <div class="post-icons">
-            <div class="count-comments">
-              <a href="#"><i class="fas fa-comment"></i>
-                <span>0</span></a>
-            </div>
-            <div class="count-view">
-              <i class="fas fa-eye"></i> 
-              <span>31521</span>
-            </div>
-            <div class="min-read">
-              <i class="fas fa-clock"></i>
-              <span>1</span>
-            </div>
-          </div>
-        </div>
-        <img src="img/8.jpg" alt="">
-      </div>
-      <div class="min-date">
-        <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 7px;"></span>
-        <div class="date">
-          <span>July 26, 2019</span>
+        <div class="count-view">
+          <i class="fas fa-eye"></i> 
+          <span>31521</span>
         </div>
         <div class="min-read">
+          <i class="fas fa-clock"></i>
           <span>1</span>
-          <p>Min Read</p>
         </div>
       </div>
-      <div class="text">
-        <p>Achieving and maintaining health is an ongoing process, shaped by both the evolution of <a href="https://en.wikipedia.org/wiki/Health_care">health care</a> knowledge and practices as well as personal strategies and organized interventions for staying healthy.</p>
-        <h3>Diet</h3>
-        <p>An important way to maintain your personal health is to have a healthy diet. A healthy diet includes a variety of plant-based and animal-based foods that provide <a href="https://en.wikipedia.org/wiki/Nutrients">nutrients</a> to your body. Such nutrients give you energy and keep your body running. Nutrients help build and strengthen bones, muscles, and tendons and also regulate body processes (i.e. <a href="https://en.wikipedia.org/wiki/Blood_pressure">blood pressure</a>).</p>
-        <div class="img-text">
-          <img src="./img/gallery4.jpg" alt="">
-          <p>The <a href="https://en.wikipedia.org/wiki/Food_guide_pyramid">food guide pyramid</a> is a pyramid-shaped guide of healthy foods divided into sections. Each section shows the recommended intake for each food group (i.e. Protein, Fat, Carbohydrates, and Sugars). Making healthy food choices is important because it can lower your risk of heart disease, developing some types of <a href="https://en.wikipedia.org/wiki/Cancer">cancer</a>, and it will contribute to maintaining a healthy weight.</p>
+    </div>
+    <img src="././static/img/8.jpg" alt="">
+  </div>
+  <div class="min-date">
+    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 7px;"></span>
+    <div class="date">
+      <span>July 26, 2019</span>
+    </div>
+    <div class="min-read">
+      <span>1</span>
+      <p>Min Read</p>
+    </div>
+  </div>
+  <div class="text">
+    <p>Achieving and maintaining health is an ongoing process, shaped by both the evolution of <a href="https://en.wikipedia.org/wiki/Health_care">health care</a> knowledge and practices as well as personal strategies and organized interventions for staying healthy.</p>
+    <h3>Diet</h3>
+    <p>An important way to maintain your personal health is to have a healthy diet. A healthy diet includes a variety of plant-based and animal-based foods that provide <a href="https://en.wikipedia.org/wiki/Nutrients">nutrients</a> to your body. Such nutrients give you energy and keep your body running. Nutrients help build and strengthen bones, muscles, and tendons and also regulate body processes (i.e. <a href="https://en.wikipedia.org/wiki/Blood_pressure">blood pressure</a>).</p>
+    <div class="img-text">
+      <img src="././static/img/gallery4.jpg" alt="">
+      <p>The <a href="https://en.wikipedia.org/wiki/Food_guide_pyramid">food guide pyramid</a> is a pyramid-shaped guide of healthy foods divided into sections. Each section shows the recommended intake for each food group (i.e. Protein, Fat, Carbohydrates, and Sugars). Making healthy food choices is important because it can lower your risk of heart disease, developing some types of <a href="https://en.wikipedia.org/wiki/Cancer">cancer</a>, and it will contribute to maintaining a healthy weight.</p>
+    </div>
+    <div class="separator"></div>
+    <h3>Exercise</h3>
+    <p>Physical exercise enhances or maintains physical fitness and overall health and wellness. It strengthens muscles and improves the cardiovascular system. According to the <b>National Institutes of Health</b>, there are four types of exercise: endurance, strength, flexibility, and balance.</p>
+    <h3>Sleep</h3>
+    <p>Sleep is an essential component to maintaining health. In children, sleep is also vital for growth and development. Ongoing <a href="https://en.wikipedia.org/wiki/Sleep_deprivation">sleep deprivation</a> has been linked to an increased risk for some chronic health problems. In addition, sleep deprivation has been shown to correlate with both increased susceptibility to illness and slower recovery times from illness. In one study, people with chronic insufficient sleep, set as six hours of sleep a night or less, were found to be four times more likely to catch a cold compared to those who reported sleeping for seven hours or more a night. Due to the role of sleep in regulating <a href="https://en.wikipedia.org/wiki/Sleep_and_metabolism">metabolism</a>, insufficient sleep may also play a role in <a href="https://en.wikipedia.org/wiki/Weight_gain">weight gain</a> or, conversely, in impeding <a href="https://en.wikipedia.org/wiki/Weight_loss">weight loss</a>.</p>
+    <img src="././static/img/blog.jpg" alt="">
+    <p>Additionally, in 2007, the International Agency for Research on Cancer, which is the cancer research agency for the <a href="https://en.wikipedia.org/wiki/World_Health_Organization">World Health Organization</a>, declared that “shiftwork that involves <a href="https://en.wikipedia.org/wiki/Circadian_rhythm">circadian</a>disruption is probably <a href="https://en.wikipedia.org/wiki/Carcinogen">carcinogenic</a> to humans,” speaking to the dangers of long-term nighttime work due to its intrusion on sleep.</p>
+    <p>In 2015, the <b>National Sleep Foundation</b> released updated recommendations for sleep duration requirements based on age and concluded that:</p>
+    <div class="quote">
+      <p>“Individuals who habitually sleep outside the normal range may be exhibiting signs or symptoms of serious health problems or, if done volitionally, may be compromising their health and well-being.”</p>
+      <p style="color: #242323;"><b>Sleep Foundation</b></p>
+      <img src="././static/img/download.svg" alt="">
+    </div>
+    <div class="button">
+      <button onclick="hide()" style="outline: none; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%);transition: all 300ms ease;">Comments</button>
+      
+      <div id="myDIV">
+        <div class="title" style="display: flex;">
+          <h4 style="font-size: 24px; line-height: 1.4; margin-bottom: 25px; font-weight: 700; letter-spacing: 0px; color: #242323;">Leave a Reply</h4>
+          <span style="width: 5px; height: 5px; background-color: #FF486A; border-radius: 50%; margin-left: 5px; margin-top: 20px;"></span>
         </div>
-        <div class="separator"></div>
-        <h3>Exercise</h3>
-        <p>Physical exercise enhances or maintains physical fitness and overall health and wellness. It strengthens muscles and improves the cardiovascular system. According to the <b>National Institutes of Health</b>, there are four types of exercise: endurance, strength, flexibility, and balance.</p>
-        <h3>Sleep</h3>
-        <p>Sleep is an essential component to maintaining health. In children, sleep is also vital for growth and development. Ongoing <a href="https://en.wikipedia.org/wiki/Sleep_deprivation">sleep deprivation</a> has been linked to an increased risk for some chronic health problems. In addition, sleep deprivation has been shown to correlate with both increased susceptibility to illness and slower recovery times from illness. In one study, people with chronic insufficient sleep, set as six hours of sleep a night or less, were found to be four times more likely to catch a cold compared to those who reported sleeping for seven hours or more a night. Due to the role of sleep in regulating <a href="https://en.wikipedia.org/wiki/Sleep_and_metabolism">metabolism</a>, insufficient sleep may also play a role in <a href="https://en.wikipedia.org/wiki/Weight_gain">weight gain</a> or, conversely, in impeding <a href="https://en.wikipedia.org/wiki/Weight_loss">weight loss</a>.</p>
-        <img src="./img/blog.jpg" alt="">
-        <p>Additionally, in 2007, the International Agency for Research on Cancer, which is the cancer research agency for the <a href="https://en.wikipedia.org/wiki/World_Health_Organization">World Health Organization</a>, declared that “shiftwork that involves <a href="https://en.wikipedia.org/wiki/Circadian_rhythm">circadian</a>disruption is probably <a href="https://en.wikipedia.org/wiki/Carcinogen">carcinogenic</a> to humans,” speaking to the dangers of long-term nighttime work due to its intrusion on sleep.</p>
-        <p>In 2015, the <b>National Sleep Foundation</b> released updated recommendations for sleep duration requirements based on age and concluded that:</p>
-        <div class="quote">
-          <p>“Individuals who habitually sleep outside the normal range may be exhibiting signs or symptoms of serious health problems or, if done volitionally, may be compromising their health and well-being.”</p>
-          <p style="color: #242323;"><b>Sleep Foundation</b></p>
-          <img src="./img/download.svg" alt="">
-        </div>
-        <div class="button">
-          <button onclick="hide()" style="outline: none; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%);transition: all 300ms ease;">Comments</button>
-          
-          <div id="myDIV">
-            <div class="title" style="display: flex;">
-              <h4 style="font-size: 24px; line-height: 1.4; margin-bottom: 25px; font-weight: 700; letter-spacing: 0px; color: #242323;">Leave a Reply</h4>
-              <span style="width: 5px; height: 5px; background-color: #FF486A; border-radius: 50%; margin-left: 5px; margin-top: 20px;"></span>
-            </div>
-            <form>
-              <div class="form-group my-2">
-                <textarea name="Comment" cols="95" rows="3" placeholder="Comment"></textarea>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Name">
-                </div>
-                <div class="col">
-                  <input type="email" class="form-control" placeholder="Email">
-                </div>
-              </div>
-            </form>
-            <a class="btn btn-primary" href="#" role="button" style="width: auto; padding: 6px 12px; margin-top: 15px; height: 36px; color: #fff; border-radius: 25px; border: 0px; background-color: #FF486A; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%); outline: none;">Post Comment</a>
-          </div>
-        </div>
-        <div class="separator"></div>
-        <div class="share">
-          <div class="socials">
-            <p>Share Article:</p>
-             <ul>
-               <li style="background-color: #135CB6;"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-               <li style="background-color: #00ACED; padding-left: 13px;"><a href="#"><i class="fab fa-twitter"></i></a></li>
-               <li style="background-color: #FF486A; padding-left: 13px;"><a href="#"><i class="fas fa-envelope"></i></a></li>
-               <li style="background-color: #1FB381; padding-left: 14px;"><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-             </ul>
-          </div>
-          <div class="permalink">
-            <input type="text" value="https:/veen" id="myInput" style="width: 320px; margin-left: 55px; color: #596172; background-color: #F9F9F9; border: none; padding: 0px 10px; outline: none;">
-            <button onclick="myFunction()" style="background-color: white; border: 0px; outline: none;"><i class="far fa-copy" style="color: #FF486A;"></i></button>
-          </div>
-          <div class="separator"></div>
-        </div>
-        <div class="you-like">
-          <div class="title">
-            <h4>You might also like</h4>
-            <span></span>
+        <form>
+          <div class="form-group my-2">
+            <textarea name="Comment" cols="95" rows="3" placeholder="Comment"></textarea>
           </div>
           <div class="row">
-            <div class="grid-posts">
-              <div class="grid-item">
-                <div class="header">
-                  <a href="#"><img src="img/5.jpg" alt="" style="cursor: pointer;"></a>
-                </div>
-                <div class="post-name">
-                  <a href="#"><h4>The spectacle before us was indeed sublime</h4></a>
-                </div>
-                <div class="date">
-                  <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 15px; margin-left: -40px; margin-right: 10px;"></span>
-                  <div class="date">
-                    <span>July 26, 2019</span>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="grid-item">
-                <div class="header">
-                  <a href="#"><img src="img/6.jpg" alt="" style="cursor: pointer;"></a>
-                </div>
-                <div class="post-name">
-                  <a href="#"><h4>The meaning of health has evolved over time</h4></a>
-                </div>
-                <div class="date">
-                  <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 15px; margin-left: -40px; margin-right: 10px;"></span>
-                  <div class="date">
-                    <span>July 26, 2019</span>
-                  </div>
-                </div>
-              </div>
-              <div class="grid-item">
-                <div class="header">
-                  <a href="#"><img src="img/9.jpg" alt="" style="cursor: pointer;"></a>
-                </div>
-                <div class="post-name">
-                  <a href="#"><h4>These Are The 10 Best Restaurants in The World</h4></a>
-                </div>
-                <div class="date">
-                  <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 13px; margin-left: -40px; margin-right: 10px;"></span>
-                  <span>July 25, 2019</span>
-                </div>
-              </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="col">
+              <input type="email" class="form-control" placeholder="Email">
             </div>
           </div>
-          <div class="separator" style="margin-top: 60px;"></div>
-        </div>
-        <div class="other">
-          <div class="title">
-            <h4>Other stories</h4>
-            <span></span>
-          </div>
-          <div class="blog1">
-            <div class="name-btn">
-              <a href="#"><p>Apps & Integrations</p></a>
-              <a href="#" class="btn"><button>Next Story</button></a>
-            </div>
-            <a href="#"><img src="./img/7.jpg" alt=""></a>
-          </div>
-          <div class="blog2">
-            <div class="name-btn">
-              <a href="#" class="btn"><button>Previous Story</button></a>
-              <a href="#"><p>These Are The 10 Best Restaurants in The World</p></a>
-            </div>
-            <a href="#"><img src="./img/9.jpg" alt=""></a>
-          </div>
-        </div>
+        </form>
+        <a class="btn btn-primary" href="#" role="button" style="width: auto; padding: 6px 12px; margin-top: 15px; height: 36px; color: #fff; border-radius: 25px; border: 0px; background-color: #FF486A; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%); outline: none;">Post Comment</a>
       </div>
-    </section>
-    <section id="footer">
-      <div class="subscribe">
-        <div class="content">
-          <div class="text">
-            <div class="title">
-              <h4>Subscribe to Veen</h4>
-              <span></span>
-            </div>
-            <p>Get the latest posts delivered right to your email.</p>
-          </div> 
-          <div class="email">
-            <div class="form">
-              <form style="display: flex;">
-                <div class="form-group">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
-          </div> 
-        </div>
+    </div>
+    <div class="separator"></div>
+    <div class="share">
+      <div class="socials">
+        <p>Share Article:</p>
+         <ul>
+           <li style="background-color: #135CB6;"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+           <li style="background-color: #00ACED; padding-left: 13px;"><a href="#"><i class="fab fa-twitter"></i></a></li>
+           <li style="background-color: #FF486A; padding-left: 13px;"><a href="#"><i class="fas fa-envelope"></i></a></li>
+           <li style="background-color: #1FB381; padding-left: 14px;"><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+         </ul>
       </div>
-      <div class="widgets">
-        <div class="row">
-          <div class="popular">
-            <div class="title">
-              <h4>Popular Posts</h4>
-              <span></span>
+      <div class="permalink">
+        <input type="text" value="https:/veen" id="myInput" style="width: 320px; margin-left: 55px; color: #596172; background-color: #F9F9F9; border: none; padding: 0px 10px; outline: none;">
+        <button onclick="myFunction()" style="background-color: white; border: 0px; outline: none;"><i class="far fa-copy" style="color: #FF486A;"></i></button>
+      </div>
+      <div class="separator"></div>
+    </div>
+    <div class="you-like">
+      <div class="title">
+        <h4>You might also like</h4>
+        <span></span>
+      </div>
+      <div class="row">
+        <div class="grid-posts">
+          <div class="grid-item">
+            <div class="header">
+              <a href="#"><img src="././static/img/5.jpg" alt="" style="cursor: pointer;"></a>
             </div>
-            <div class="post">
-              <a href="#"><img src="img/post1.jpg" alt=""></a>
-              <div class="info">
-                <a href="#"><h4>3 ideas to keep you healthy and strong</h4></a>
-                <div class="datetime">
-                  <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
-                  <span>July 25, 2019</span>
-                </div>
+            <div class="post-name">
+              <a href="#"><h4>The spectacle before us was indeed sublime</h4></a>
+            </div>
+            <div class="date">
+              <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 15px; margin-left: -40px; margin-right: 10px;"></span>
+              <div class="date">
+                <span>July 26, 2019</span>
               </div>
             </div>
-            <div class="post">
-              <a href="#"><img src="img/post2.jpg" alt=""></a>
-              <div class="info">
-                <a href="#"><h4>Far far away, behind the word mountains</h4></a>
-                <div class="datetime">
-                  <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
-                  <span>August 15, 2019</span>
-                </div>
+            
+          </div>
+          <div class="grid-item">
+            <div class="header">
+              <a href="#"><img src="././static/img/6.jpg" alt="" style="cursor: pointer;"></a>
+            </div>
+            <div class="post-name">
+              <a href="#"><h4>The meaning of health has evolved over time</h4></a>
+            </div>
+            <div class="date">
+              <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 15px; margin-left: -40px; margin-right: 10px;"></span>
+              <div class="date">
+                <span>July 26, 2019</span>
               </div>
             </div>
           </div>
-          <div class="menu">
-            <div class="title">
-              <h4>Menu</h4>
-              <span></span>
+          <div class="grid-item">
+            <div class="header">
+              <a href="#"><img src="././static/img/9.jpg" alt="" style="cursor: pointer;"></a>
             </div>
-            <div class="menu-footer">
-              <ul>
-                <li><a href="./home.html">Home</a></li>
-                <li><a href="./author.html">Author</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-              </ul>
+            <div class="post-name">
+              <a href="#"><h4>These Are The 10 Best Restaurants in The World</h4></a>
             </div>
-          </div>
-          <div class="gallery">
-            <div class="title">
-              <h4>Gallery</h4>
-              <span></span>
-            </div>
-            <div class="imgs">
-              <ul>
-                <li>
-                  <a href="./img/gallery1.jpg"><img src="img/gallery1.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="./img/gallery2.jpg"><img src="img/gallery2.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="./img/4.jpg"><img src="img/4.jpg" alt=""></a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="./img/gallery4.jpg"><img src="img/gallery4.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="./img/gallery5.jpg"><img src="img/gallery5.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="./img/post3.jpg"><img src="img/post3.jpg" alt=""></a>
-                </li>
-              </ul>
+            <div class="date">
+              <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 13px; margin-left: -40px; margin-right: 10px;"></span>
+              <span>July 25, 2019</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="logo-footer">
-        <div class="logo">
-          <div class="title">
-            <a href="./home.html"><h2>Veen</h2></a>
-            <span></span>
-          </div>
-        </div>
-        <div class="rights">
-          <p>© 2021 Veen. All rights reserved.</p>
-        </div>
+      <div class="separator" style="margin-top: 60px;"></div>
+    </div>
+    <div class="other">
+      <div class="title">
+        <h4>Other stories</h4>
+        <span></span>
       </div>
-    </section>
-    <script>
-      function hide() {
-        var x = document.getElementById("myDIV");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
-      function myFunction() {
-          var copyText = document.getElementById("myInput");
-          copyText.select();
-          copyText.setSelectionRange(0, 99999)
-          document.execCommand("copy");
-          alert("Copied the text: " + copyText.value);
-        }
-      </script>
-      
-</body>
-</html>
+      <div class="blog1">
+        <div class="name-btn">
+          <a href="#"><p>Apps & Integrations</p></a>
+          <a href="#" class="btn"><button>Next Story</button></a>
+        </div>
+        <a href="#"><img src="././static/img/7.jpg" alt=""></a>
+      </div>
+      <div class="blog2">
+        <div class="name-btn">
+          <a href="#" class="btn"><button>Previous Story</button></a>
+          <a href="#"><p>These Are The 10 Best Restaurants in The World</p></a>
+        </div>
+        <a href="#"><img src="././static/img/9.jpg" alt=""></a>
+      </div>
+    </div>
+  </div>
+</section>  
+{% endblock page %}
+  
+
+{% block js %}
+<script>
+  function hide() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  function myFunction() {
+      var copyText = document.getElementById("myInput");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      alert("Copied the text: " + copyText.value);
+    }
+  </script>
+{% endblock js %}
+  

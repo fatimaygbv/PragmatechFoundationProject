@@ -2,6 +2,7 @@
 
 from flask import Blueprint,render_template
 
+
 admin_bp=Blueprint('admin',__name__,template_folder='templates',static_folder='static',url_prefix='/admin')
 
 @admin_bp.route("/")
@@ -22,7 +23,8 @@ def admin_comments():
 
 @admin_bp.route("/contact-form")
 def admin_contact_form():
-    return render_template('admin/contact-form.html')  
+    AllResponses=Contact.query.all()
+    return render_template('admin/contact-form.html',reponses=AllResponses)  
 
 @admin_bp.route("/ads")
 def admin_ads():
@@ -30,4 +32,6 @@ def admin_ads():
 
 @admin_bp.route("/new-ad")
 def admin_new_ad():
-    return render_template('admin/new_ad.html')                     
+    return render_template('admin/new_ad.html')          
+
+import models               
