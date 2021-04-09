@@ -1,7 +1,7 @@
 # main
 from main import app,db
-from flask import Blueprint,render_template,request,url_for,flash,redirect
 from models import *
+from flask import Blueprint,render_template,request,url_for,flash,redirect
 
 @app.route("/")
 def main():

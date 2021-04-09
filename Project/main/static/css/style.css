@@ -643,7 +643,7 @@ body {
   padding-top: 30px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  background-image: url(/main/static/img/bg-subscribe.jpg);
+  background-image: url(../../static/img/bg-subscribe.jpg);
 }
 
 #footer .subscribe .content {
@@ -1778,7 +1778,7 @@ body {
   padding-top: 30px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  background-image: url(/main/static/img/bg-subscribe.jpg);
+  background-image: url(../../static/img/bg-subscribe.jpg);
 }
 
 #footer .subscribe .content {
@@ -2552,7 +2552,7 @@ body {
   padding-top: 30px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  background-image: url(/main/static/main/static/img/bg-subscribe.jpg);
+  background-image: url(../../static/img/bg-subscribe.jpg);
 }
 
 #footer .subscribe .content {
@@ -3163,7 +3163,7 @@ body {
   padding-top: 30px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  background-image: url(/main/static/img/bg-subscribe.jpg);
+  background-image: url(../../static/img/bg-subscribe.jpg);
 }
 
 #footer .subscribe .content {
