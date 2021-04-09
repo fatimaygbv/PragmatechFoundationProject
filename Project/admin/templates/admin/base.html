@@ -1,345 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8" />
-        <title>Admin & Dashboard</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-        <meta content="" name="author" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+    <meta charset="utf-8" />
+    <title>Admin & Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="./static/assets/images/favicon.ico">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="./static/assets/images/favicon.ico">
 
-        <!-- App css -->
-        <link href="./static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="./static/assets/css/jquery-ui.min.css" rel="stylesheet">
-        <link href="./static/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="./static/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
-        <link href="./static/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- App css -->
+    <link href="./static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="./static/assets/css/jquery-ui.min.css" rel="stylesheet">
+    <link href="./static/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="./static/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="./static/assets/css/app.min.css" rel="stylesheet" type="text/css" />
 
-    </head>
+</head>
 
-    <body>
-        <!-- leftbar-tab-menu -->
-        <div class="leftbar-tab-menu">
-            <div class="main-icon-menu">
-                <a href='{{url_for("admin.admin")}}' class="logo logo-metrica d-block text-center">
-                    <span>
+<body>
+    <!-- leftbar-tab-menu -->
+    <div class="leftbar-tab-menu">
+        <div class="main-icon-menu">
+            <a href='{{url_for("admin.admin_blogs")}}' class="logo logo-metrica d-block text-center">
+                <span>
                         <img src="./static/assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
                     </span>
+            </a>
+            <nav class="nav">
+                <a href="#MetricaDashboard" class="nav-link" data-toggle="tooltip-custom" data-placement="right" data-trigger="hover" title="" data-original-title="Dashboard">
+                    <i data-feather="monitor" class="align-self-center menu-icon icon-dual"></i>
                 </a>
-                <nav class="nav">
-                    <a href="#MetricaDashboard" class="nav-link" data-toggle="tooltip-custom" data-placement="right"  data-trigger="hover" title="" data-original-title="Dashboard">
-                        <i data-feather="monitor" class="align-self-center menu-icon icon-dual"></i>
-                    </a><!--end MetricaDashboards--> 
-                </nav><!--end nav-->
-                <div class="pro-metrica-end">
-                    <a href="" class="profile">
-                        <img src="./static/assets/images/users/user-4.jpg" alt="profile-user" class="rounded-circle thumb-sm"> 
-                    </a>
-                </div>
-            </div><!--end main-icon-menu-->
+                <!--end MetricaDashboards-->
+            </nav>
+            <!--end nav-->
+            <div class="pro-metrica-end">
+                <a href="" class="profile">
+                    <img src="./static/assets/images/users/user-4.jpg" alt="profile-user" class="rounded-circle thumb-sm">
+                </a>
+            </div>
+        </div>
+        <!--end main-icon-menu-->
 
-            <div class="main-menu-inner">
-                <!-- LOGO -->
-                <div class="topbar-left">
-                    <a href='{{url_for("admin.admin")}}' class="logo">
-                        <span>
+        <div class="main-menu-inner">
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href='{{url_for("admin.admin_blogs")}}' class="logo">
+                    <span>
                             <img src="./static/assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark">
                             <img src="./static/assets/images/logo.png" alt="logo-large" class="logo-lg logo-light">
                         </span>
-                    </a>
+                </a>
+            </div>
+            <!--end logo-->
+            <div class="menu-body slimscroll">
+                <div id="MetricaDashboard" class="main-icon-menu-pane">
+                    <div class="title-box">
+                        <h6 class="menu-title">Dashboard</h6>
+                    </div>
+                    <ul class="nav metismenu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript: void(0);"><span class="w-100">Blog</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href='{{url_for("admin.admin_blogs")}}'>All blogs</a></li>
+                                <li><a href='{{url_for("admin.admin_new_blog")}}'>Add new blog</a></li>
+                            </ul>
+                        </li>
+                        <!--end nav-item-->
+                        <li class="nav-item"><a class="nav-link" href='{{url_for("admin.admin_comments")}}'>Comments</a></li>
+                        <li class="nav-item"><a class="nav-link" href='{{url_for("admin.admin_contact_form")}}'>Contact Form</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript: void(0);"><span class="w-100">Ads</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href='{{url_for("admin.admin_ads")}}'>All ads</a></li>
+                                <li><a href='{{url_for("admin.admin_new_ad")}}'>Add new ad</a></li>
+                            </ul>
+                        </li>
+                        <!--end nav-item-->
+                    </ul>
                 </div>
-                <!--end logo-->
-                <div class="menu-body slimscroll">                    
-                     <div id="MetricaDashboard" class="main-icon-menu-pane">
-                        <div class="title-box">
-                            <h6 class="menu-title">Dashboard</h6>       
-                        </div>
-                        <ul class="nav metismenu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="javascript: void(0);"><span class="w-100">Blog</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href='{{url_for("admin.admin_blogs")}}'>All blogs</a></li>
-                                    <li><a href='{{url_for("admin.admin_new_blog")}}'>Add new blog</a></li>            
-                                </ul>            
-                            </li><!--end nav-item-->
-                            <li class="nav-item"><a class="nav-link" href='{{url_for("admin.admin_comments")}}'>Comments</a></li>
-                            <li class="nav-item"><a class="nav-link" href='{{url_for("admin.admin_contact_form")}}'>Contact Form</a></li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="javascript: void(0);"><span class="w-100">Ads</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href='{{url_for("admin.admin_ads")}}'>All ads</a></li>
-                                    <li><a href='{{url_for("admin.admin_new_ad")}}'>Add new ad</a></li>            
-                                </ul>            
-                            </li><!--end nav-item-->                         
-                        </ul>
-                    </div><!-- end Dashboards -->
-                </div><!--end menu-body-->
-            </div><!-- end main-menu-inner-->
+                <!-- end Dashboards -->
+            </div>
+            <!--end menu-body-->
         </div>
-        <!-- end leftbar-tab-menu-->
+        <!-- end main-menu-inner-->
+    </div>
+    <!-- end leftbar-tab-menu-->
 
-        <!-- Top Bar Start -->
-        <div class="topbar">           
-            <!-- Navbar -->
-            <nav class="navbar-custom">    
-                <!--end topbar-nav-->
-    
-                <ul class="list-unstyled topbar-nav mb-0">  
-                    <li>
-                        <a href="../crm/crm-index.html">
-                            <span class="responsive-logo">
+    <!-- Top Bar Start -->
+    <div class="topbar">
+        <!-- Navbar -->
+        <nav class="navbar-custom">
+            <!--end topbar-nav-->
+
+            <ul class="list-unstyled topbar-nav mb-0">
+                <li>
+                    <a href="../crm/crm-index.html">
+                        <span class="responsive-logo">
                                 <img src="./static/assets/images/logo-sm.png" alt="logo-small" class="logo-sm align-self-center" height="34">
                             </span>
-                        </a>                        
-                    </li>                      
-                    <li>
-                        <button class="button-menu-mobile nav-link">
+                    </a>
+                </li>
+                <li>
+                    <button class="button-menu-mobile nav-link">
                             <i data-feather="menu" class="align-self-center"></i>
                         </button>
-                    </li>
-                    <li class="hide-phone app-search">
-                        <form role="search" class="">
-                            <input type="text" id="AllCompo" placeholder="Search..." class="form-control">
-                            <a href=""><i class="fas fa-search"></i></a>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-            <!-- end navbar-->
-        </div>
-        <!-- Top Bar End -->
+                </li>
+                <li class="hide-phone app-search">
+                    <form role="search" class="">
+                        <input type="text" id="AllCompo" placeholder="Search..." class="form-control">
+                        <a href=""><i class="fas fa-search"></i></a>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+        <!-- end navbar-->
+    </div>
+    <!-- Top Bar End -->
 
-        <div class="page-wrapper">
+    <div class="page-wrapper">
 
-            <!-- Page Content-->
-            <div class="page-content-tab">
+        <!-- Page Content-->
+        <div class="page-content-tab">
 
-                <div class="container-fluid">
-                    <!-- Page-Title -->
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="page-title-box">
-                                <h4 class="page-title">Dashboard</h4>
-                            </div><!--end page-title-box-->
-                            {% block page %}
-        
-                            {% endblock %}
-                        </div><!--end col-->
+            <div class="container-fluid">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <h4 class="page-title">Dashboard</h4>
+                        </div>
+                        <!--end page-title-box-->
+                        {% block page %} {% endblock %}
                     </div>
-                    <!-- end page title end breadcrumb -->
-   
+                    <!--end col-->
+                </div>
+                <!-- end page title end breadcrumb -->
 
-                </div><!-- container -->
 
-                <!--  Modal content for the above example -->
-                <div class="modal modal-rightbar fade" tabindex="-1" role="dialog" aria-labelledby="MetricaRightbar" aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title mt-0" id="MetricaRightbar">Appearance</h5>
-                                <button type="button" class="btn btn-sm btn-soft-primary btn-circle btn-square" data-dismiss="modal" aria-hidden="true"><i class="mdi mdi-close"></i></button>
-                            </div>
-                            <div class="modal-body">                                
-                               <!-- Nav tabs -->
-                               <ul class="nav nav-pills nav-justified mt-2 mb-4" role="tablist">
-                                    <li class="nav-item waves-effect waves-light">
-                                        <a class="nav-link active" data-toggle="tab" href="#ActivityTab" role="tab">Activity</a>
-                                    </li>
-                                    <li class="nav-item waves-effect waves-light">
-                                        <a class="nav-link" data-toggle="tab" href="#TasksTab" role="tab">Tasks</a>
-                                    </li>
-                                    <li class="nav-item waves-effect waves-light">
-                                        <a class="nav-link" data-toggle="tab" href="#SettingsTab" role="tab">Settings</a>
-                                    </li>
-                                </ul>                                
-                                
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-                                    <div class="tab-pane active " id="ActivityTab" role="tabpanel">
-                                        <div class="bg-light mx-n3">
-                                            <img src="./static/assets/images/small/img-1.gif" alt="" class="d-block mx-auto my-4" height="180">
-                                        </div>
-                                        <div class="slimscroll scroll-rightbar">
-                                            <div class="activity">
-                                                <div class="activity-info">
-                                                    <div class="icon-info-activity">
-                                                        <i class="mdi mdi-checkbox-marked-circle-outline bg-soft-success"></i>
-                                                    </div>
-                                                    <div class="activity-info-text mb-2">
-                                                        <div class="mb-1">
-                                                            <small class="text-muted d-block mb-1">10 Min ago</small>
-                                                            <a href="#" class="m-0 w-75">Task finished</a>                                                            
-                                                        </div>
-                                                        <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
-                                                    </div>
-                                                </div> 
-    
-                                                <div class="activity-info">
-                                                    <div class="icon-info-activity">
-                                                        <i class="mdi mdi-timer-off bg-soft-pink"></i>
-                                                    </div>
-                                                    <div class="activity-info-text mb-2">
-                                                        <div class="mb-1">
-                                                            <small class="text-muted d-block mb-1">50 Min ago</small>
-                                                            <a href="#" class="m-0 w-75">Task Overdue</a>                                                            
-                                                        </div>
-                                                        <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
-                                                        <span class="badge badge-soft-secondary">Design</span>
-                                                        <span class="badge badge-soft-secondary">HTML</span>
-                                                    </div>                                                   
-                                                </div>
-                                                <div class="activity-info">
-                                                    <div class="icon-info-activity">
-                                                        <i class="mdi mdi-alert-decagram bg-soft-purple"></i>
-                                                    </div>
-                                                    <div class="activity-info-text mb-2">
-                                                        <div class="mb-1">
-                                                            <small class="text-muted d-block mb-1">10 hours ago</small>
-                                                            <a href="#" class="m-0 w-75">New Task</a>                                                            
-                                                        </div>
-                                                        <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
-                                                    </div>        
-                                                </div>   
-    
-                                                <div class="activity-info">
-                                                    <div class="icon-info-activity">
-                                                        <i class="mdi mdi-clipboard-alert bg-soft-warning"></i>
-                                                    </div>
-                                                    <div class="activity-info-text mb-2">
-                                                        <div class="mb-1">
-                                                            <small class="text-muted d-block mb-1">yesterday</small>
-                                                            <a href="#" class="m-0 w-75">New Comment</a>                                                            
-                                                        </div>
-                                                        <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
-                                                    </div>    
-                                                </div>  
-                                                <div class="activity-info">
-                                                    <div class="icon-info-activity">
-                                                        <i class="mdi mdi-clipboard-alert bg-soft-secondary"></i>
-                                                    </div>
-                                                    <div class="activity-info-text mb-2">
-                                                        <div class="mb-1">
-                                                            <small class="text-muted d-block mb-1">01 feb 2020</small>
-                                                            <a href="#" class="m-0 w-75">New Lead Meting</a>                                                            
-                                                        </div>
-                                                        <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
-                                                    </div>    
-                                                </div>   
-                                                <div class="activity-info">
-                                                    <div class="icon-info-activity">
-                                                        <i class="mdi mdi-checkbox-marked-circle-outline bg-soft-success"></i>
-                                                    </div>
-                                                    <div class="activity-info-text mb-2">
-                                                        <div class="mb-1">
-                                                            <small class="text-muted d-block mb-1">26 jan 2020</small>
-                                                            <a href="#" class="m-0 w-75">Task finished</a>                                                            
-                                                        </div>
-                                                        <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
-                                                    </div>
-                                                </div>                                                                                                            
-                                            </div><!--end activity-->
-                                        </div><!--end activity-scroll-->
-                                    </div><!--end tab-pane-->
-                                    <div class="tab-pane" id="TasksTab" role="tabpanel">
-                                        <div class="m-0">
-                                            <div id="rightbar_chart" class="apex-charts"></div>                                            
-                                        </div>  
-                                        <div class="text-center mt-n2 mb-2">
-                                            <button type="button" class="btn btn-soft-primary">Create Project</button>
-                                            <button type="button" class="btn btn-soft-primary">Create Task</button>
-                                        </div>
-                                        <div class="slimscroll scroll-rightbar">
-                                            <div class="p-2">
-                                                <div class="media mb-3">
-                                                    <img src="./static/assets/images/widgets/project3.jpg" alt="" class="thumb-lg rounded-circle">                                      
-                                                    <div class="media-body align-self-center text-truncate ml-3">
-                                                        <p class="text-success font-weight-semibold mb-0 font-14">Project</p>
-                                                        <h4 class="mt-0 mb-0 font-weight-semibold text-dark font-18">Payment App</h4>                                            
-                                                    </div><!--end media-body-->
-                                                </div>
-                                                <span><b>Deadline:</b> 02 June 2020</span>
-                                                <a href="javascript: void(0);" class="d-block mt-3">
-                                                    <p class="text-muted mb-0">Complete Tasks<span class="float-right">75%</span></p>
-                                                    <div class="progress mt-2" style="height: 4px;">
-                                                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </a>                                            
-                                            </div>
-                                            <hr class="hr-dashed">                                            
-                                        </div>                                        
-                                    </div><!--end tab-pane-->
-                                    <div class="tab-pane" id="SettingsTab" role="tabpanel">
-                                        <div class="p-1 bg-light mx-n3">
-                                            <h6 class="px-3">Account Settings</h6>
-                                        </div>
-                                        <div class="p-2 text-left mt-3">
-                                            <div class="custom-control custom-switch switch-primary mb-3">
-                                                <input type="checkbox" class="custom-control-input" id="settings-switch1" checked="">
-                                                <label class="custom-control-label" for="settings-switch1">Auto updates</label>
-                                            </div>
-
-                                            <div class="custom-control custom-switch switch-primary mb-3">
-                                                <input type="checkbox" class="custom-control-input" id="settings-switch2">
-                                                <label class="custom-control-label" for="settings-switch2">Location Permission</label>
-                                            </div>
-
-                                            <div class="custom-control custom-switch switch-primary mb-3">
-                                                <input type="checkbox" class="custom-control-input" id="settings-switch3" checked="">
-                                                <label class="custom-control-label" for="settings-switch3">Show offline Contacts</label>
-                                            </div>    
-                                        </div>
-                                        <div class="p-1 bg-light mx-n3">
-                                            <h6 class="px-3">General Settings</h6>
-                                        </div>
-                                        <div class="p-2 text-left mt-3">
-                                            <div class="custom-control custom-switch switch-primary mb-3">
-                                                <input type="checkbox" class="custom-control-input" id="settings-switch4" checked="">
-                                                <label class="custom-control-label" for="settings-switch4">Show me Online</label>
-                                            </div>
-
-                                            <div class="custom-control custom-switch switch-primary mb-3">
-                                                <input type="checkbox" class="custom-control-input" id="settings-switch5">
-                                                <label class="custom-control-label" for="settings-switch5">Status visible to all</label>
-                                            </div>
-
-                                            <div class="custom-control custom-switch switch-primary mb-3">
-                                                <input type="checkbox" class="custom-control-input" id="settings-switch6" checked="">
-                                                <label class="custom-control-label" for="settings-switch6">Notifications Popup</label>
-                                            </div> 
-                                        </div>
-                                    </div><!--end tab-pane-->
-                                </div> <!--end tab-content--> 
-                            </div><!--end modal-body-->
-                        </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dialog -->
-                </div><!-- /.modal --> 
-
-                <!--end footer-->
             </div>
-            <!-- end page content -->
+            <!-- container -->
+
+            <!--  Modal content for the above example -->
+            <div class="modal modal-rightbar fade" tabindex="-1" role="dialog" aria-labelledby="MetricaRightbar" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title mt-0" id="MetricaRightbar">Appearance</h5>
+                            <button type="button" class="btn btn-sm btn-soft-primary btn-circle btn-square" data-dismiss="modal" aria-hidden="true"><i class="mdi mdi-close"></i></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-pills nav-justified mt-2 mb-4" role="tablist">
+                                <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link active" data-toggle="tab" href="#ActivityTab" role="tab">Activity</a>
+                                </li>
+                                <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link" data-toggle="tab" href="#TasksTab" role="tab">Tasks</a>
+                                </li>
+                                <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link" data-toggle="tab" href="#SettingsTab" role="tab">Settings</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane active " id="ActivityTab" role="tabpanel">
+                                    <div class="bg-light mx-n3">
+                                        <img src="./static/assets/images/small/img-1.gif" alt="" class="d-block mx-auto my-4" height="180">
+                                    </div>
+                                    <div class="slimscroll scroll-rightbar">
+                                        <div class="activity">
+                                            <div class="activity-info">
+                                                <div class="icon-info-activity">
+                                                    <i class="mdi mdi-checkbox-marked-circle-outline bg-soft-success"></i>
+                                                </div>
+                                                <div class="activity-info-text mb-2">
+                                                    <div class="mb-1">
+                                                        <small class="text-muted d-block mb-1">10 Min ago</small>
+                                                        <a href="#" class="m-0 w-75">Task finished</a>
+                                                    </div>
+                                                    <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="activity-info">
+                                                <div class="icon-info-activity">
+                                                    <i class="mdi mdi-timer-off bg-soft-pink"></i>
+                                                </div>
+                                                <div class="activity-info-text mb-2">
+                                                    <div class="mb-1">
+                                                        <small class="text-muted d-block mb-1">50 Min ago</small>
+                                                        <a href="#" class="m-0 w-75">Task Overdue</a>
+                                                    </div>
+                                                    <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
+                                                    <span class="badge badge-soft-secondary">Design</span>
+                                                    <span class="badge badge-soft-secondary">HTML</span>
+                                                </div>
+                                            </div>
+                                            <div class="activity-info">
+                                                <div class="icon-info-activity">
+                                                    <i class="mdi mdi-alert-decagram bg-soft-purple"></i>
+                                                </div>
+                                                <div class="activity-info-text mb-2">
+                                                    <div class="mb-1">
+                                                        <small class="text-muted d-block mb-1">10 hours ago</small>
+                                                        <a href="#" class="m-0 w-75">New Task</a>
+                                                    </div>
+                                                    <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="activity-info">
+                                                <div class="icon-info-activity">
+                                                    <i class="mdi mdi-clipboard-alert bg-soft-warning"></i>
+                                                </div>
+                                                <div class="activity-info-text mb-2">
+                                                    <div class="mb-1">
+                                                        <small class="text-muted d-block mb-1">yesterday</small>
+                                                        <a href="#" class="m-0 w-75">New Comment</a>
+                                                    </div>
+                                                    <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
+                                                </div>
+                                            </div>
+                                            <div class="activity-info">
+                                                <div class="icon-info-activity">
+                                                    <i class="mdi mdi-clipboard-alert bg-soft-secondary"></i>
+                                                </div>
+                                                <div class="activity-info-text mb-2">
+                                                    <div class="mb-1">
+                                                        <small class="text-muted d-block mb-1">01 feb 2020</small>
+                                                        <a href="#" class="m-0 w-75">New Lead Meting</a>
+                                                    </div>
+                                                    <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
+                                                </div>
+                                            </div>
+                                            <div class="activity-info">
+                                                <div class="icon-info-activity">
+                                                    <i class="mdi mdi-checkbox-marked-circle-outline bg-soft-success"></i>
+                                                </div>
+                                                <div class="activity-info-text mb-2">
+                                                    <div class="mb-1">
+                                                        <small class="text-muted d-block mb-1">26 jan 2020</small>
+                                                        <a href="#" class="m-0 w-75">Task finished</a>
+                                                    </div>
+                                                    <p class="text-muted mb-2 text-truncate">There are many variations of passages.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end activity-->
+                                    </div>
+                                    <!--end activity-scroll-->
+                                </div>
+                                <!--end tab-pane-->
+                                <div class="tab-pane" id="TasksTab" role="tabpanel">
+                                    <div class="m-0">
+                                        <div id="rightbar_chart" class="apex-charts"></div>
+                                    </div>
+                                    <div class="text-center mt-n2 mb-2">
+                                        <button type="button" class="btn btn-soft-primary">Create Project</button>
+                                        <button type="button" class="btn btn-soft-primary">Create Task</button>
+                                    </div>
+                                    <div class="slimscroll scroll-rightbar">
+                                        <div class="p-2">
+                                            <div class="media mb-3">
+                                                <img src="./static/assets/images/widgets/project3.jpg" alt="" class="thumb-lg rounded-circle">
+                                                <div class="media-body align-self-center text-truncate ml-3">
+                                                    <p class="text-success font-weight-semibold mb-0 font-14">Project</p>
+                                                    <h4 class="mt-0 mb-0 font-weight-semibold text-dark font-18">Payment App</h4>
+                                                </div>
+                                                <!--end media-body-->
+                                            </div>
+                                            <span><b>Deadline:</b> 02 June 2020</span>
+                                            <a href="javascript: void(0);" class="d-block mt-3">
+                                                <p class="text-muted mb-0">Complete Tasks<span class="float-right">75%</span></p>
+                                                <div class="progress mt-2" style="height: 4px;">
+                                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <hr class="hr-dashed">
+                                    </div>
+                                </div>
+                                <!--end tab-pane-->
+                                <div class="tab-pane" id="SettingsTab" role="tabpanel">
+                                    <div class="p-1 bg-light mx-n3">
+                                        <h6 class="px-3">Account Settings</h6>
+                                    </div>
+                                    <div class="p-2 text-left mt-3">
+                                        <div class="custom-control custom-switch switch-primary mb-3">
+                                            <input type="checkbox" class="custom-control-input" id="settings-switch1" checked="">
+                                            <label class="custom-control-label" for="settings-switch1">Auto updates</label>
+                                        </div>
+
+                                        <div class="custom-control custom-switch switch-primary mb-3">
+                                            <input type="checkbox" class="custom-control-input" id="settings-switch2">
+                                            <label class="custom-control-label" for="settings-switch2">Location Permission</label>
+                                        </div>
+
+                                        <div class="custom-control custom-switch switch-primary mb-3">
+                                            <input type="checkbox" class="custom-control-input" id="settings-switch3" checked="">
+                                            <label class="custom-control-label" for="settings-switch3">Show offline Contacts</label>
+                                        </div>
+                                    </div>
+                                    <div class="p-1 bg-light mx-n3">
+                                        <h6 class="px-3">General Settings</h6>
+                                    </div>
+                                    <div class="p-2 text-left mt-3">
+                                        <div class="custom-control custom-switch switch-primary mb-3">
+                                            <input type="checkbox" class="custom-control-input" id="settings-switch4" checked="">
+                                            <label class="custom-control-label" for="settings-switch4">Show me Online</label>
+                                        </div>
+
+                                        <div class="custom-control custom-switch switch-primary mb-3">
+                                            <input type="checkbox" class="custom-control-input" id="settings-switch5">
+                                            <label class="custom-control-label" for="settings-switch5">Status visible to all</label>
+                                        </div>
+
+                                        <div class="custom-control custom-switch switch-primary mb-3">
+                                            <input type="checkbox" class="custom-control-input" id="settings-switch6" checked="">
+                                            <label class="custom-control-label" for="settings-switch6">Notifications Popup</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end tab-pane-->
+                            </div>
+                            <!--end tab-content-->
+                        </div>
+                        <!--end modal-body-->
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+
+            <!--end footer-->
         </div>
-        <!-- end page-wrapper -->
-        
-        
+        <!-- end page content -->
+    </div>
+    <!-- end page-wrapper -->
 
 
-        <!-- jQuery  -->
-        <script src="./static/assets/js/jquery.min.js"></script>
-        <script src="./static/assets/js/jquery-ui.min.js"></script>
-        <script src="./static/assets/js/bootstrap.bundle.min.js"></script>
-        <script src="./static/assets/js/metismenu.min.js"></script>
-        <script src="./static/assets/js/waves.js"></script>
-        <script src="./static/assets/js/feather.min.js"></script>
-        <script src="./static/assets/js/jquery.slimscroll.min.js"></script>
-        <script src="../plugins/apexcharts/apexcharts.min.js"></script> 
-        
-        <!-- App js -->
-        <script src="./static/assets/js/app.js"></script>
-        
-    </body>
+
+
+    <!-- jQuery  -->
+    <script src="./static/assets/js/jquery.min.js"></script>
+    <script src="./static/assets/js/jquery-ui.min.js"></script>
+    <script src="./static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/assets/js/metismenu.min.js"></script>
+    <script src="./static/assets/js/waves.js"></script>
+    <script src="./static/assets/js/feather.min.js"></script>
+    <script src="./static/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="../plugins/apexcharts/apexcharts.min.js"></script>
+
+    <!-- App js -->
+    <script src="./static/assets/js/app.js"></script>
+
+</body>
 
 </html>

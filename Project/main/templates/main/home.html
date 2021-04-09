@@ -113,14 +113,15 @@
           <div class="grid-top">
             <div class="row">
               <div class="grid-posts">
+                {% for blog in blog %}
                 <div class="grid-item">
                   <div class="header">
                     <div class="text">
-                      <a href="#"><h1>The spectacle before us was indeed sublime</h1></a>
+                      <a href="/blog/{{blog.id}}"><h1>{{blog.title}}</h1></a>
                       <div class="post-icons">
                         <div class="count-comments">
-                          <a href="#"><i class="fas fa-comment"></i>
-                            <span>0</span></a>
+                          <i class="fas fa-comment"></i>
+                            <span>0</span>
                         </div>
                         <div class="count-view">
                           <i class="fas fa-eye"></i> 
@@ -128,180 +129,20 @@
                         </div>
                         <div class="min-read">
                           <i class="fas fa-clock"></i>
-                          <span>1</span>
+                          <span>{{blog.min_read}}</span>
                         </div>
                       </div>
                     </div>
-                    <a href="#"><img src="././static/img/5.jpg" alt="" style="cursor: pointer;"></a>
+                    <a href="/blog/{{blog.id}}"><img src="{{blog.img}}" alt="" style="cursor: pointer;"></a>
                   </div>
                   <div class="coma-date">
                     <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 10px; margin-left: 2px;"></span>
                     <div class="date">
-                      <span>July 26, 2019</span>
+                      <span>{{blog.date}}</span>
                     </div>
-                  </div>
-                  <div class="post-excerpt">
-                    <p>Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated…</p>
                   </div>
                 </div>
-                <div class="grid-item">
-                  <div class="header">
-                    <div class="text">
-                      <a href="#"><h1>Musical improvisation is the spontaneous music</h1></a>
-                      <div class="post-icons">
-                        <div class="count-comments">
-                          <a href="#"><i class="fas fa-comment"></i>
-                            <span>0</span></a>
-                        </div>
-                        <div class="count-view">
-                          <i class="fas fa-eye"></i> 
-                          <span>31521</span>
-                        </div>
-                        <div class="min-read">
-                          <i class="fas fa-clock"></i>
-                          <span>1</span>
-                        </div>
-                      </div>
-                    </div>
-                    <a href="#"><img src="././static/img/2.jpg" alt="" style="cursor: pointer;"></a>
-                  </div>
-                  <div class="coma-date">
-                    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 10px; margin-left: 2px;"></span>
-                    <div class="date">
-                      <span>July 26, 2019</span>
-                    </div>
-                  </div>
-                  <div class="post-excerpt">
-                    <p>It was one of the worst storms to hit London since God knows when. The thunder rolled,…</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="grid-posts">
-                <div class="grid-item">
-                  <div class="header">
-                    <div class="text"><a href="#"><h1>The meaning of health has evolved over time</h1></a>
-                      <div class="post-icons">
-                        <div class="count-comments">
-                          <a href="#"><i class="fas fa-comment"></i>
-                            <span>0</span></a>
-                        </div>
-                        <div class="count-view">
-                          <i class="fas fa-eye"></i> 
-                          <span>31521</span>
-                        </div>
-                        <div class="min-read">
-                          <i class="fas fa-clock"></i>
-                          <span>1</span>
-                        </div>
-                      </div>
-                    </div>
-                    <a href="#"><img src="././static/img/6.jpg" alt="" style="cursor: pointer;"></a>
-                  </div>
-                  <div class="coma-date">
-                    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 10px; margin-left: 2px;"></span>
-                    <div class="date">
-                      <span>July 26, 2019</span>
-                    </div>
-                  </div>
-                  <div class="post-excerpt">
-                    <p>In keeping with the biomedical perspective, early definitions of health focused on the theme of the body’s…</p>
-                  </div>
-                </div>
-                <div class="grid-item">
-                  <div class="header">
-                    <div class="text"><a href="#"><h1>Apps & integrations</h1></a>
-                      <div class="post-icons" style="margin-top: 230px;">
-                        <div class="count-comments">
-                          <a href="#"><i class="fas fa-comment"></i>
-                            <span>0</span></a>
-                        </div>
-                        <div class="count-view">
-                          <i class="fas fa-eye"></i> 
-                          <span>31521</span>
-                        </div>
-                        <div class="min-read">
-                          <i class="fas fa-clock"></i>
-                          <span>1</span>
-                        </div>
-                      </div>
-                    </div>
-                    <a href="#"><img src="././static/img/7.jpg" alt="" style="cursor: pointer;"></a>
-                  </div>
-                  <div class="coma-date">
-                    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 10px; margin-left: 2px;"></span>
-                    <div class="date">
-                      <span>July 26, 2019</span>
-                    </div>
-                  </div>
-                  <div class="post-excerpt">
-                    <p>There are three primary ways to work with third-party services in Ghost: using Zapier, editing your theme,…</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="grid-posts">
-                <div class="grid-item">
-                  <div class="header">
-                    <div class="text"><a href="./post.html"><h1>3 ideas to keep you healthy and strong</h1></a>
-                      <div class="post-icons">
-                        <div class="count-comments">
-                          <a href="#"><i class="fas fa-comment"></i>
-                            <span>0</span></a>
-                        </div>
-                        <div class="count-view">
-                          <i class="fas fa-eye"></i> 
-                          <span>31521</span>
-                        </div>
-                        <div class="min-read">
-                          <i class="fas fa-clock"></i>
-                          <span>1</span>
-                        </div>
-                      </div>
-                    </div>
-                    <a href="./post.html"><img src="././static/img/8.jpg" alt=""></a>
-                  </div>
-                  <div class="coma-date">
-                    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 10px; margin-left: 2px;"></span>
-                    <div class="date">
-                      <span>July 26, 2019</span>
-                    </div>
-                  </div>
-                  <div class="post-excerpt">
-                    <p>Achieving and maintaining health is an ongoing process, shaped by both the evolution of health care knowledge and practices…</p>
-                  </div>
-                </div>
-                <div class="grid-item">
-                  <div class="header">
-                    <div class="text"><a href="#"><h1>These Are The 10 Best Restaurants in The World</h1></a><div class="post-icons">
-                      <div class="count-comments">
-                        <a href="#"><i class="fas fa-comment"></i>
-                          <span>0</span></a>
-                      </div>
-                      <div class="count-view">
-                        <i class="fas fa-eye"></i> 
-                        <span>31521</span>
-                      </div>
-                      <div class="min-read">
-                        <i class="fas fa-clock"></i>
-                        <span>1</span>
-                      </div>
-                    </div>
-                  </div>
-                    <a href="#"><img src="././static/img/9.jpg" alt="" style="cursor: pointer;"></a>
-                  </div>
-                  <div class="coma-date">
-                    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 10px; margin-left: 2px;"></span>
-                    <div class="date">
-                      <span>July 26, 2019</span>
-                    </div>
-                  </div>
-                  <div class="post-excerpt">
-                    <p>Each year, fine diners, restaurateurs and food writers—I’m in the last group—try to read the annual World’s…</p>
-                  </div>
-                </div>
+                {% endfor %}
               </div>
             </div>
           </div>

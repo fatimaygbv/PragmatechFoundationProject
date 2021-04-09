@@ -1,11 +1,9 @@
-{% extends 'admin/base.html' %}
-
-{% block page %}
+{% extends 'admin/base.html' %} {% block page %}
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
             <h3 class="my-4">Add new blog</h3>
-            <form action="/admin_new_blog" method="POST", >
+            <form action="new-blog" method="POST" enctype="multipart/form-data">
                 <div class="form-group my-2">
                     <input type="text" class="form-control" name="title" placeholder="Blog Title">
                 </div>
@@ -26,4 +24,3 @@
     </div>
 </div>
 {% endblock page %}
-    

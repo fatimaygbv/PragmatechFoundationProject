@@ -1,46 +1,42 @@
 # admin
 from main import *
+from werkzeug.utils import secure_filename
+import os
 
 admin_bp=Blueprint('admin',__name__,template_folder='templates',static_folder='static',url_prefix='/admin')
 
-@admin_bp.route("/")
-def admin():
-    blogs=Blog.query.all()
-    comments=Comments.query.all()
-    AllResponses=Contact.query.all()
-    return render_template('admin/base.html',contact=AllResponses,blogs=blogs)
 
-@admin_bp.route("/blogs")
+@admin_bp.route("/")
 def admin_blogs():
     blogs=Blog.query.all()
-    return render_template('admin/blogs.html')    
+    return render_template('admin/blogs.html',blogs=blogs)    
 
 @admin_bp.route("/new-blog",methods=['GET','POST'])
 def admin_new_blog():
-    blogs=Blog.query.all()
-    comments=Comments.query.all()
     if request.method=='POST':
         file=request.files['img']
         filename=secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_PATH'],filename))
+        filePath=f"/{app.config['UPLOAD_PATH']}{filename}"
         post=Blog(
             title=request.form['title'],
             text=request.form['text'],
-            img=filename,
+            img=filePath,
             min_read=request.form['min_read'],)
         db.session.add(post)
         db.session.commit()
-        redirect ('/admin/blogs')
-    return render_template('admin/new_blog.html',blogs=blogs)      
+        redirect ('/admin')
+    return render_template('admin/new_blog.html')      
 
 @admin_bp.route("/comments")
 def admin_comments():
-    return render_template('admin/comments.html')     
+    comments=Comments.query.all()
+    return render_template('admin/comments.html',comments=comments)     
 
 @admin_bp.route("/contact-form")
 def admin_contact_form():
-    AllResponses=Contact.query.all()
-    return render_template('admin/contact-form.html',contact=AllResponses)  
+    contact=Contact.query.all()
+    return render_template('admin/contact-form.html',contact=contact)  
 
 @admin_bp.route("/delete/<id>")
 def delete(id):
@@ -49,10 +45,17 @@ def delete(id):
     db.session.commit()
     return redirect('/admin/contact-form')    
 
+@admin_bp.route("/blogdelete/<id>")
+def blogDelete(id):
+    blogDelete=Blog.query.get(id)
+    db.session.delete(blogDelete)
+    db.session.commit()
+    return redirect('/admin')  
+
 @admin_bp.route("/ads")
 def admin_ads():
     return render_template('admin/ads.html')      
 
 @admin_bp.route("/new-ad")
 def admin_new_ad():
-    return render_template('admin/new_ad.html')                    
+    return render_template('admin/new_ad.html')

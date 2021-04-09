@@ -263,7 +263,7 @@ body {
 }
 
 #grid-container .grid .left-grid .grid-top .row {
-  height: 550px;
+  height: auto;
   margin: 0px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,7 +282,7 @@ body {
 }
 
 #grid-container .grid .left-grid .grid-top .row .grid-posts .grid-item {
-  height: 600px;
+  height: auto;
   width: 462px;
   padding: 0px 20px;
   padding-bottom: 50px;

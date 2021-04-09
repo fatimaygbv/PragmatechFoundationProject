@@ -1,5 +1,4 @@
-{% extends 'admin/base.html' %} 
-{% block page %}
+{% extends 'admin/base.html' %} {% block page %}
 
 <div class="row">
     <div class="col-lg-12">
@@ -15,31 +14,35 @@
                                 <th scope="col">Blog image</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Min Read</th>
+                                <th scope="col">Text</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {% for blog in blogs %}
+                            {% for post in blogs %}
                             <tr>
                                 <th scope="row">{{post.id}}</th>
                                 <td>{{post.title}}</td>
                                 <td>{{post.img}}</td>
                                 <td>{{post.date}}</td>
                                 <td>{{post.min_read}}</td>
+                                <td>{{post.text}}</td>
                                 <td>
-                                    <a href="delete/{{post.id}}"><i class="fas fa-trash"></a>
-                                    <a href="update/{{post.id}}"><i class="fas fa-edit"></i></a>
-                                    <a href="detail/{{post.id}}"><i class="far fa-envelope-open"></i></a>
+                                    <a href="blogdelete/{{post.id}}"><i class="fas fa-trash"></i></a>
                                 </td>
                             </tr>
                             {% endfor %}
                         </tbody>
-                    </table><!--end /table-->
-                </div><!--end /tableresponsive-->
-            </div><!--end card-body-->
-        </div><!--end card-->
-    </div> <!-- end col -->
+                    </table>
+                    <!--end /table-->
+                </div>
+                <!--end /tableresponsive-->
+            </div>
+            <!--end card-body-->
+        </div>
+        <!--end card-->
+    </div>
+    <!-- end col -->
 </div>
 
 {% endblock page %}
-    

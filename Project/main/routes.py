@@ -5,11 +5,8 @@ from flask import Blueprint,render_template,request,url_for,flash,redirect
 
 @app.route("/")
 def main():
-    return render_template('main/home.html')
-
-@app.route("/2")
-def main_2():
-    return render_template('main/home-2.html')    
+    blog = Blog.query.all()
+    return render_template('main/home.html',blog=blog)    
 
 @app.route("/author")
 def author():
