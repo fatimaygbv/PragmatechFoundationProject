@@ -30,7 +30,7 @@ def delete(id):
     responseforDelete=Contact.query.get(id)
     db.session.delete(responseforDelete)
     db.session.commit()
-    return redirect('admin/contact-form')    
+    return redirect('/admin/contact-form')    
 
 @admin_bp.route("/ads")
 def admin_ads():
