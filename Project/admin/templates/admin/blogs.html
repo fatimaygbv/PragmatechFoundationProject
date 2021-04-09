@@ -8,37 +8,31 @@
                 <h4 class="header-title mt-0">All Blogs</h4>
                 <div class="table-responsive-sm">
                     <table class="table mb-0">
-                        <caption>List of users</caption>
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Content</th>
-                                <th scope="col">Cover image</th>
+                                <th scope="col">Blog Title</th>
                                 <th scope="col">Blog image</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Min Read</th>
+                                <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
+                            {% for blog in blogs %}
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{post.id}}</th>
+                                <td>{{post.title}}</td>
+                                <td>{{post.img}}</td>
+                                <td>{{post.date}}</td>
+                                <td>{{post.min_read}}</td>
+                                <td>
+                                    <a href="delete/{{post.id}}"><i class="fas fa-trash"></a>
+                                    <a href="update/{{post.id}}"><i class="fas fa-edit"></i></a>
+                                    <a href="detail/{{post.id}}"><i class="far fa-envelope-open"></i></a>
+                                </td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table><!--end /table-->
                 </div><!--end /tableresponsive-->

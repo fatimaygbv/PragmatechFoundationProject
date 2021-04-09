@@ -17,11 +17,10 @@ class Blog(db.Model):
     id=db.Column(db.Integer,primary_key=True)
     title=db.Column(db.String(120))
     text=db.Column(db.String(120))
-    cover_img=db.Column(db.String(120))
     img=db.Column(db.String(120))
     date=db.Column(db.DateTime,default=datetime.now())
     min_read=db.Column(db.String(50))
-    comment=db.relationship('Blog',backref='blog',lazy=True) 
+    comment=db.relationship('Comments',backref='blog',lazy=True) 
 
 class Comments(db.Model):
     id=db.Column(db.Integer,primary_key=True)
