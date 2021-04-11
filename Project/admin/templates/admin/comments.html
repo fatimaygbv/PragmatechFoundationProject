@@ -9,35 +9,27 @@
                 <h4 class="header-title mt-0">All Comments</h4>
                 <div class="table-responsive-sm">
                     <table class="table mb-0">
-                        <caption>List of users</caption>
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Comment</th>
-                                <th scope="col">Blog id</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                            {% for comment in comment_p %}
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{comment.id}}</th>
+                                <td>{{comment.name}}</td>
+                                <td>{{comment.email}}</td>
+                                <td>{{comment.comment}}</td>
+                                <td>
+                                    <a href="delete/{{comment.id}}"><i class="fas fa-trash"></i></a>
+                                </td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table><!--end /table-->
                 </div><!--end /tableresponsive-->

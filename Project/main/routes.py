@@ -12,15 +12,28 @@ def main():
 
 @app.route("/author")
 def author():
-    return render_template('main/author.html')     
+    end = db.session.query(Blog).order_by(Blog.id.desc()).limit(2)
+    return render_template('main/author.html',ennd=end)     
 
-@app.route("/post/<int:id>")
+@app.route("/post/<int:id>",methods=['GET','POST'])
 def post(id):
     blog=Blog.query.get(id)
-    return render_template('main/post.html',blog=blog)       
+    end = db.session.query(Blog).order_by(Blog.id.desc()).limit(2)
+    if request.method=='POST':
+        name=request.form['name']
+        email=request.form['email']
+        comment=request.form['comment']
+        id=id
+        comment_p=Comments(name=name, email=email, comment=comment,blog_id=id)
+        db.session.add(comment_p)
+        db.session.commit()
+        return redirect('/')
+    return render_template('main/post.html',blog=blog,ennd=end)       
 
 @app.route("/contact",methods=['GET','POST'])
 def contact():
+    endBlogs = db.session.query(Blog).order_by(Blog.id.desc()).limit(3)
+    end = db.session.query(Blog).order_by(Blog.id.desc()).limit(2)
     if request.method=='POST':
         name=request.form['name']
         email=request.form['email']
@@ -30,4 +43,4 @@ def contact():
         db.session.add(contact)
         db.session.commit()
         return redirect('/contact')
-    return render_template('main/contact.html')
+    return render_template('main/contact.html',ennd=end,a=endBlogs)
