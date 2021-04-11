@@ -6,15 +6,15 @@ from flask import Blueprint,render_template,request,url_for,flash,redirect
 @app.route("/")
 def main():
     blog = Blog.query.all()
-    return render_template('main/home.html',blog=blog)    
+    a = session.query(User).order_by(User.id.desc()).limit(3)
+    return render_template('main/home.html',blog=blog,a=a)    
 
 @app.route("/author")
 def author():
     return render_template('main/author.html')     
 
-@app.route("/post/<id>")
-def post():
-    blog = Blog.query.all()
+@app.route("/post/<int:id>")
+def post(id):
     return render_template('main/post.html',blog=blog)       
 
 @app.route("/contact",methods=['GET','POST'])

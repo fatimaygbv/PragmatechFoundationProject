@@ -5,13 +5,31 @@
   <div class="container">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        {% for blog in blog %}
         <div class="carousel-item active">
           <div class="blog-name">
             <div class="info">
-              <a href="/blog/{{blog.id}}"><h1>{{blog.title}}</h1></a>
+              <a href='{{url_for("main")}}'>
+                <h1 style="color: #FF486A;">Welcome to VEEN</h1>
+              </a>
               <div class="date-min">
-                <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 11px; margin-left: 2px;"></span>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque rerum earum eum ullam perferendis
+                  adipisci ipsum voluptatum dolore.</h4>
+              </div>
+            </div>
+          </div>
+          <img src="/admin/static/upload/2.jpg" class="d-block w-100" alt="..."
+            style="width: 100%; height: 500px; object-fit:cover;">
+        </div>
+        {% for a in a %}
+        <div class="carousel-item">
+          <div class="blog-name">
+            <div class="info">
+              <a href="/post/{{blog.id}}">
+                <h1>{{blog.title}}</h1>
+              </a>
+              <div class="date-min">
+                <span
+                  style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 11px; margin-left: 2px;"></span>
                 <div class="date">
                   <span>{{blog.date}}</span>
                 </div>
@@ -37,114 +55,114 @@
     </div>
   </div>
 </section>
-    <section id="grid-container">
-      <div class="grid">
-        <div class="left-grid">
-          <div class="grid-top">
-            <div class="row">
-              {% for blog in blog %}
-              <div class="grid-posts" style="width: 50%; height: 500px;">
-                <div class="grid-item">
-                  <div class="header">
-                    <div class="text">
-                      <a href="/blog/{{blog.id}}"><h1>{{blog.title}}</h1></a>
-                      <div class="post-icons">
-                        <div class="count-comments">
-                          <i class="fas fa-comment"></i>
-                            <span>0</span>
-                        </div>
-                        <div class="count-view">
-                          <i class="fas fa-eye"></i> 
-                          <span>31521</span>
-                        </div>
-                        <div class="min-read">
-                          <i class="fas fa-clock"></i>
-                          <span>{{blog.min_read}}</span>
-                        </div>
-                      </div>
+<section id="grid-container">
+  <div class="grid">
+    <div class="left-grid">
+      <div class="grid-top">
+        <div class="row">
+          {% for blog in blog %}
+          <div class="grid-posts" style="width: 50%; height: 500px;">
+            <div class="grid-item">
+              <div class="header">
+                <div class="text">
+                  <a href="/post/{{blog.id}}">
+                    <h1>{{blog.title}}</h1>
+                  </a>
+                  <div class="post-icons">
+                    <div class="count-comments">
+                      <i class="fas fa-comment"></i>
+                      <span>0</span>
                     </div>
-                    <a href="/blog/{{blog.id}}"><img src="{{blog.img}}" alt="" style="cursor: pointer; width: 100%;"></a>
-                  </div>
-                  <div class="coma-date">
-                    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 10px; margin-left: 2px;"></span>
-                    <div class="date">
-                      <span>{{blog.date}}</span>
+                    <div class="count-view">
+                      <i class="fas fa-eye"></i>
+                      <span>31521</span>
+                    </div>
+                    <div class="min-read">
+                      <i class="fas fa-clock"></i>
+                      <span>{{blog.min_read}}</span>
                     </div>
                   </div>
                 </div>
+                <a href="/post/{{blog.id}}"><img src="{{blog.img}}" alt="" style="cursor: pointer; width: 100%;"></a>
               </div>
-              {% endfor %}
+              <div class="coma-date">
+                <span
+                  style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 10px; margin-left: 2px;"></span>
+                <div class="date">
+                  <span>{{blog.date}}</span>
+                </div>
+              </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        <div class="right-sidebar">
-          <div class="sidebar">
-            <div class="sections">
-              <div class="popular-posts">
-                <div class="title">
-                  <h4>Popular Posts</h4>
-                  <span></span>
-                </div>
-                <div class="post">
-                  <a href="./post.html"><img src="././static/img/post1.jpg" alt=""></a>
-                  <div class="info">
-                    <a href="./post.html"><h4>3 ideas to keep you healthy and strong</h4></a>
-                    <div class="datetime">
-                      <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
-                      <span>July 25, 2019</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="post">
-                  <a href="#"><img src="././static/img/post2.jpg" alt=""></a>
-                  <div class="info">
-                    <a href="#"><h4>Far far away, behind the word mountains</h4></a>
-                    <div class="datetime">
-                      <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
-                      <span>August 15, 2019</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="post">
-                  <a href="#"><img src="././static/img/post3.jpg" alt=""></a>
-                  <div class="info">
-                    <a href="#"><h4>The spectacle before us was indeed sublime</h4></a>
-                    <div class="datetime">
-                      <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
-                      <span>July 26, 2019</span>
-                    </div>
-                  </div>
+      </div>
+    </div>
+    <div class="right-sidebar">
+      <div class="sidebar">
+        <div class="sections">
+          <div class="popular-posts">
+            <div class="title">
+              <h4>Recent Posts</h4>
+              <span></span>
+            </div>
+            {% for a in a %}
+            <div class="post">
+              <a href="/post/{{blog.id}}"><img src="{{blog.img}}" alt=""></a>
+              <div class="info">
+                <a href="/post/{{blog.id}}">
+                  <h4>{{blog.title}}</h4>
+                </a>
+                <div class="datetime">
+                  <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
+                  <span>{{blog.date}}</span>
                 </div>
               </div>
-              <div class="social-profiles">
-                <h4>Social profiles</h4>
-                <ul>
-                  <a href="https://twitter.com/envato"><li style="background: #63CDF1;">
-                    <div class="name" style="float: left;"><p style="margin: 0px;">Twitter</p><span>Follow me!</span></div>
-                    <i class="fab fa-twitter" style="float: right;"></i>
-                  </li></a>
-                  <a href="http://www.facebook.com/envato"><li style="background: #507CBE;">
-                    <div class="name" style="float: left;"><p style="margin: 0px;">Facebook</p><span>Follow me!</span></div>
-                    <i class="fab fa-facebook-f" style="float: right;"></i>
-                  </li></a>
-                  <a href="https://instagram.com/envato"><li style="background: #D62976;">
-                    <div class="name" style="float: left;"><p style="margin: 0px;">Instagram</p><span>Our photos!</span></div>
-                    <i class="fab fa-instagram" style="float: right;"></i></li></a>
-                </ul>
-              </div>
-              <div class="ad">
-                <div class="title">
-                  <h4>Advertising</h4>
-                  <span></span>
-                  
-                </div>
-                <div class="img">
-                  <a href="#"><img src="./././static/img/mc.jpg" alt=""></a>
-                </div>
-              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="social-profiles">
+            <h4>Social profiles</h4>
+            <ul>
+              <a href="https://twitter.com/envato">
+                <li style="background: #63CDF1;">
+                  <div class="name" style="float: left;">
+                    <p style="margin: 0px;">Twitter</p><span>Follow me!</span>
+                  </div>
+                  <i class="fab fa-twitter" style="float: right;"></i>
+                </li>
+              </a>
+              <a href="http://www.facebook.com/envato">
+                <li style="background: #507CBE;">
+                  <div class="name" style="float: left;">
+                    <p style="margin: 0px;">Facebook</p><span>Follow me!</span>
+                  </div>
+                  <i class="fab fa-facebook-f" style="float: right;"></i>
+                </li>
+              </a>
+              <a href="https://instagram.com/envato">
+                <li style="background: #D62976;">
+                  <div class="name" style="float: left;">
+                    <p style="margin: 0px;">Instagram</p><span>Our photos!</span>
+                  </div>
+                  <i class="fab fa-instagram" style="float: right;"></i>
+                </li>
+              </a>
+            </ul>
+          </div>
+          <div class="ad">
+            <div class="title">
+              <h4>Advertising</h4>
+              <span></span>
+
+            </div>
+            <div class="img">
+              <a href="#"><img src="./././static/img/mc.jpg" alt=""></a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    {% endblock page %}
+    </div>
+  </div>
+</section>
+{% endblock page %}

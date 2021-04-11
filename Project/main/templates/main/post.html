@@ -10,7 +10,7 @@
 <section id="post-container">
   <div class="header">
     <div class="text">
-      <h1>3 ideas to keep you healthy and strong</h1>
+      <h1>{{blog.title}}</h1>
       <div class="post-icons">
         <div class="count-comments">
           <a href="#"><i class="fas fa-comment"></i>
@@ -22,38 +22,25 @@
         </div>
         <div class="min-read">
           <i class="fas fa-clock"></i>
-          <span>1</span>
+          <span>{{blog.min_read}}</span>
         </div>
       </div>
     </div>
-    <img src="././static/img/8.jpg" alt="">
+    <img src="{{blog.img}}" alt="">
   </div>
   <div class="min-date">
     <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 7px;"></span>
     <div class="date">
-      <span>July 26, 2019</span>
+      <span>{{blog.date}}</span>
     </div>
     <div class="min-read">
-      <span>1</span>
+      <span>{{blog.min_read}}</span>
       <p>Min Read</p>
     </div>
   </div>
   <div class="text">
     <p>Achieving and maintaining health is an ongoing process, shaped by both the evolution of <a href="https://en.wikipedia.org/wiki/Health_care">health care</a> knowledge and practices as well as personal strategies and organized interventions for staying healthy.</p>
-    <h3>Diet</h3>
-    <p>An important way to maintain your personal health is to have a healthy diet. A healthy diet includes a variety of plant-based and animal-based foods that provide <a href="https://en.wikipedia.org/wiki/Nutrients">nutrients</a> to your body. Such nutrients give you energy and keep your body running. Nutrients help build and strengthen bones, muscles, and tendons and also regulate body processes (i.e. <a href="https://en.wikipedia.org/wiki/Blood_pressure">blood pressure</a>).</p>
-    <div class="img-text">
-      <img src="././static/img/gallery4.jpg" alt="">
-      <p>The <a href="https://en.wikipedia.org/wiki/Food_guide_pyramid">food guide pyramid</a> is a pyramid-shaped guide of healthy foods divided into sections. Each section shows the recommended intake for each food group (i.e. Protein, Fat, Carbohydrates, and Sugars). Making healthy food choices is important because it can lower your risk of heart disease, developing some types of <a href="https://en.wikipedia.org/wiki/Cancer">cancer</a>, and it will contribute to maintaining a healthy weight.</p>
-    </div>
     <div class="separator"></div>
-    <h3>Exercise</h3>
-    <p>Physical exercise enhances or maintains physical fitness and overall health and wellness. It strengthens muscles and improves the cardiovascular system. According to the <b>National Institutes of Health</b>, there are four types of exercise: endurance, strength, flexibility, and balance.</p>
-    <h3>Sleep</h3>
-    <p>Sleep is an essential component to maintaining health. In children, sleep is also vital for growth and development. Ongoing <a href="https://en.wikipedia.org/wiki/Sleep_deprivation">sleep deprivation</a> has been linked to an increased risk for some chronic health problems. In addition, sleep deprivation has been shown to correlate with both increased susceptibility to illness and slower recovery times from illness. In one study, people with chronic insufficient sleep, set as six hours of sleep a night or less, were found to be four times more likely to catch a cold compared to those who reported sleeping for seven hours or more a night. Due to the role of sleep in regulating <a href="https://en.wikipedia.org/wiki/Sleep_and_metabolism">metabolism</a>, insufficient sleep may also play a role in <a href="https://en.wikipedia.org/wiki/Weight_gain">weight gain</a> or, conversely, in impeding <a href="https://en.wikipedia.org/wiki/Weight_loss">weight loss</a>.</p>
-    <img src="././static/img/blog.jpg" alt="">
-    <p>Additionally, in 2007, the International Agency for Research on Cancer, which is the cancer research agency for the <a href="https://en.wikipedia.org/wiki/World_Health_Organization">World Health Organization</a>, declared that “shiftwork that involves <a href="https://en.wikipedia.org/wiki/Circadian_rhythm">circadian</a>disruption is probably <a href="https://en.wikipedia.org/wiki/Carcinogen">carcinogenic</a> to humans,” speaking to the dangers of long-term nighttime work due to its intrusion on sleep.</p>
-    <p>In 2015, the <b>National Sleep Foundation</b> released updated recommendations for sleep duration requirements based on age and concluded that:</p>
     <div class="button">
       <button onclick="hide()" style="outline: none; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%);transition: all 300ms ease;">Comments</button>
       
