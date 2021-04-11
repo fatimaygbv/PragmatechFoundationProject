@@ -1,6 +1,4 @@
-{% extends 'main/base.html' %}
-
-{% block page %}
+{% extends 'main/base.html' %} {% block page %}
 <section id="slider">
   <div class="container">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -20,7 +18,7 @@
           <img src="/admin/static/upload/2.jpg" class="d-block w-100" alt="..."
             style="width: 100%; height: 500px; object-fit:cover;">
         </div>
-        {% for a in a %}
+        {% for blog in blog %}
         <div class="carousel-item">
           <div class="blog-name">
             <div class="info">
@@ -106,16 +104,16 @@
               <h4>Recent Posts</h4>
               <span></span>
             </div>
-            {% for a in a %}
+            {% for endblog in endBlogs %}
             <div class="post">
-              <a href="/post/{{blog.id}}"><img src="{{blog.img}}" alt=""></a>
+              <a href="/post/{{endblog.id}}"><img src="{{endblog.img}}" alt="" style="object-fit: cover;"></a>
               <div class="info">
-                <a href="/post/{{blog.id}}">
-                  <h4>{{blog.title}}</h4>
+                <a href="/post/{{endblog.id}}">
+                  <h4>{{endblog.title}}</h4>
                 </a>
                 <div class="datetime">
                   <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
-                  <span>{{blog.date}}</span>
+                  <span>{{endblog.date}}</span>
                 </div>
               </div>
             </div>

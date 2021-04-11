@@ -6,8 +6,9 @@ from flask import Blueprint,render_template,request,url_for,flash,redirect
 @app.route("/")
 def main():
     blog = Blog.query.all()
-    a = session.query(User).order_by(User.id.desc()).limit(3)
-    return render_template('main/home.html',blog=blog,a=a)    
+    endBlogs = db.session.query(Blog).order_by(Blog.id.desc()).limit(3)
+    end = db.session.query(Blog).order_by(Blog.id.desc()).limit(2)
+    return render_template('main/home.html',blog=blog,endBlogs=endBlogs,ennd=end)    
 
 @app.route("/author")
 def author():
@@ -15,6 +16,7 @@ def author():
 
 @app.route("/post/<int:id>")
 def post(id):
+    blog=Blog.query.get(id)
     return render_template('main/post.html',blog=blog)       
 
 @app.route("/contact",methods=['GET','POST'])
@@ -28,4 +30,4 @@ def contact():
         db.session.add(contact)
         db.session.commit()
         return redirect('/contact')
-    return render_template('main/contact.html')  
+    return render_template('main/contact.html')

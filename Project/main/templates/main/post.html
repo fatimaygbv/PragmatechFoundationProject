@@ -1,12 +1,6 @@
-{% extends 'main/home.html' %}
-
-
-{% block title %}
-<title>3 ideas to keep you healthy and strong</title>
-{% endblock title %}
-
-
-{% block page %}
+{% extends 'main/base.html' %} {% block title %}
+<title>{{blog.title}}</title>
+{% endblock title %} {% block page %}
 <section id="post-container">
   <div class="header">
     <div class="text">
@@ -17,7 +11,7 @@
             <span>0</span></a>
         </div>
         <div class="count-view">
-          <i class="fas fa-eye"></i> 
+          <i class="fas fa-eye"></i>
           <span>31521</span>
         </div>
         <div class="min-read">
@@ -39,15 +33,22 @@
     </div>
   </div>
   <div class="text">
-    <p>Achieving and maintaining health is an ongoing process, shaped by both the evolution of <a href="https://en.wikipedia.org/wiki/Health_care">health care</a> knowledge and practices as well as personal strategies and organized interventions for staying healthy.</p>
+    <p>Achieving and maintaining health is an ongoing process, shaped by both the evolution of <a
+        href="https://en.wikipedia.org/wiki/Health_care">health care</a> knowledge and practices as well as personal
+      strategies and organized interventions for
+      staying healthy.</p>
     <div class="separator"></div>
     <div class="button">
-      <button onclick="hide()" style="outline: none; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%);transition: all 300ms ease;">Comments</button>
-      
+      <button onclick="hide()"
+        style="outline: none; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%);transition: all 300ms ease;">Comments</button>
+
       <div id="myDIV">
         <div class="title" style="display: flex;">
-          <h4 style="font-size: 24px; line-height: 1.4; margin-bottom: 25px; font-weight: 700; letter-spacing: 0px; color: #242323;">Leave a Reply</h4>
-          <span style="width: 5px; height: 5px; background-color: #FF486A; border-radius: 50%; margin-left: 5px; margin-top: 20px;"></span>
+          <h4
+            style="font-size: 24px; line-height: 1.4; margin-bottom: 25px; font-weight: 700; letter-spacing: 0px; color: #242323;">
+            Leave a Reply</h4>
+          <span
+            style="width: 5px; height: 5px; background-color: #FF486A; border-radius: 50%; margin-left: 5px; margin-top: 20px;"></span>
         </div>
         <form>
           <div class="form-group my-2">
@@ -62,104 +63,34 @@
             </div>
           </div>
         </form>
-        <a class="btn btn-primary" href="#" role="button" style="width: auto; padding: 6px 12px; margin-top: 15px; height: 36px; color: #fff; border-radius: 25px; border: 0px; background-color: #FF486A; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%); outline: none;">Post Comment</a>
+        <a class="btn btn-primary" href="#" role="button"
+          style="width: auto; padding: 6px 12px; margin-top: 15px; height: 36px; color: #fff; border-radius: 25px; border: 0px; background-color: #FF486A; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%); outline: none;">Post
+          Comment</a>
       </div>
     </div>
     <div class="separator"></div>
     <div class="share">
       <div class="socials">
         <p>Share Article:</p>
-         <ul>
-           <li style="background-color: #135CB6;"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-           <li style="background-color: #00ACED; padding-left: 13px;"><a href="#"><i class="fab fa-twitter"></i></a></li>
-           <li style="background-color: #FF486A; padding-left: 13px;"><a href="#"><i class="fas fa-envelope"></i></a></li>
-           <li style="background-color: #1FB381; padding-left: 14px;"><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-         </ul>
+        <ul>
+          <li style="background-color: #135CB6;"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li style="background-color: #00ACED; padding-left: 13px;"><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li style="background-color: #FF486A; padding-left: 13px;"><a href="#"><i class="fas fa-envelope"></i></a>
+          </li>
+          <li style="background-color: #1FB381; padding-left: 14px;"><a href="#"><i class="fab fa-whatsapp"></i></a>
+          </li>
+        </ul>
       </div>
       <div class="permalink">
-        <input type="text" value="https:/veen" id="myInput" style="width: 320px; margin-left: 55px; color: #596172; background-color: #F9F9F9; border: none; padding: 0px 10px; outline: none;">
-        <button onclick="myFunction()" style="background-color: white; border: 0px; outline: none;"><i class="far fa-copy" style="color: #FF486A;"></i></button>
-      </div>
-      <div class="separator"></div>
-    </div>
-    <div class="you-like">
-      <div class="title">
-        <h4>You might also like</h4>
-        <span></span>
-      </div>
-      <div class="row">
-        <div class="grid-posts">
-          <div class="grid-item">
-            <div class="header">
-              <a href="#"><img src="././static/img/5.jpg" alt="" style="cursor: pointer;"></a>
-            </div>
-            <div class="post-name">
-              <a href="#"><h4>The spectacle before us was indeed sublime</h4></a>
-            </div>
-            <div class="date">
-              <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 15px; margin-left: -40px; margin-right: 10px;"></span>
-              <div class="date">
-                <span>July 26, 2019</span>
-              </div>
-            </div>
-            
-          </div>
-          <div class="grid-item">
-            <div class="header">
-              <a href="#"><img src="././static/img/6.jpg" alt="" style="cursor: pointer;"></a>
-            </div>
-            <div class="post-name">
-              <a href="#"><h4>The meaning of health has evolved over time</h4></a>
-            </div>
-            <div class="date">
-              <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 15px; margin-left: -40px; margin-right: 10px;"></span>
-              <div class="date">
-                <span>July 26, 2019</span>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item">
-            <div class="header">
-              <a href="#"><img src="././static/img/9.jpg" alt="" style="cursor: pointer;"></a>
-            </div>
-            <div class="post-name">
-              <a href="#"><h4>These Are The 10 Best Restaurants in The World</h4></a>
-            </div>
-            <div class="date">
-              <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 13px; margin-left: -40px; margin-right: 10px;"></span>
-              <span>July 25, 2019</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="separator" style="margin-top: 60px;"></div>
-    </div>
-    <div class="other">
-      <div class="title">
-        <h4>Other stories</h4>
-        <span></span>
-      </div>
-      <div class="blog1">
-        <div class="name-btn">
-          <a href="#"><p>Apps & Integrations</p></a>
-          <a href="#" class="btn"><button>Next Story</button></a>
-        </div>
-        <a href="#"><img src="././static/img/7.jpg" alt=""></a>
-      </div>
-      <div class="blog2">
-        <div class="name-btn">
-          <a href="#" class="btn"><button>Previous Story</button></a>
-          <a href="#"><p>These Are The 10 Best Restaurants in The World</p></a>
-        </div>
-        <a href="#"><img src="././static/img/9.jpg" alt=""></a>
+        <input type="text" value="https:/veen" id="myInput"
+          style="width: 320px; margin-left: 55px; color: #596172; background-color: #F9F9F9; border: none; padding: 0px 10px; outline: none;">
+        <button onclick="myFunction()" style="background-color: white; border: 0px; outline: none;"><i
+            class="far fa-copy" style="color: #FF486A;"></i></button>
       </div>
     </div>
   </div>
-</section>  
-{% endblock page %}
-  
-
-{% block js %}
+</section>
+{% endblock page %} {% block js %}
 <script>
   function hide() {
     var x = document.getElementById("myDIV");
@@ -169,13 +100,13 @@
       x.style.display = "none";
     }
   }
+
   function myFunction() {
-      var copyText = document.getElementById("myInput");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-      alert("Copied the text: " + copyText.value);
-    }
-  </script>
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Copied the text: " + copyText.value);
+  }
+</script>
 {% endblock js %}
-  

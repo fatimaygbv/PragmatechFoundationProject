@@ -1,174 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/52fe999af9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="././static/css/grid.css">
-    <link rel="stylesheet" href="././static/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
-    
-    {% block title %}
-    {% endblock title %}
-      
-</head>
-<body>
-    <section id="navbar-top">
-        <div class="navbar">
-            <div class="logo-icons">
-                <div class="social">
-                    <ul>
-                        <li><a href="https://www.facebook.com/envato"><i class="fab fa-facebook-f" style="color:#175BEB; font-size: 22px; width: 14px; height: 24px; "></i></a></li>
-                        <li><a href="https://twitter.com/envato"><i class="fab fa-twitter" style="color: #1DA1F2; font-size: 22px; width: 14px; height: 24px;"></i></a></li>
-                        <li><a href="https://instagram.com/envato"><i class="fab fa-instagram" style="color:rgb(242,40,177); font-size: 22px; width: 14px; height: 24px;"></i></a></li>
-                    </ul>
-                </div>
-                <div class="logo">
-                  <div class="title">
-                    <h1><a href='{{url_for("main")}}'>Veen</a></h1>
-                    <span></span>
-                  </div>
-                </div>
-                <div class="search">
-                  <div class="input-group">
-                    <div class="form-outline">
-                      <input type="search" id="form1" class="form-control" placeholder="Search" style="border-radius: 25px;">
-                    </div>
-                    <button type="button" class="btn btn-primary" style="background-color: #FF486A; border-color: #FF486A; border-radius: 50%; margin-left: 5px;">
-                      <i class="fas fa-search"></i>
-                    </button>
-                  </div>
-                </div>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href='{{url_for("main")}}'>Home</a></li>
-                    <li><a href='{{url_for("author")}}'>Author</a></li>
-                    <li><a href='{{url_for("contact")}}'>Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-    {% block page %}
 
-    {% endblock page %}
-      
-    <section id="footer">
-      <div class="subscribe">
-        <div class="content">
-          <div class="text">
-            <div class="title">
-              <h4>Subscribe to Veen</h4>
-              <span></span>
-            </div>
-            <p>Get the latest posts delivered right to your email.</p>
-          </div> 
-          <div class="email">
-            <div class="form">
-              <form style="display: flex;">
-                <div class="form-group">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
-          </div> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/52fe999af9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../static/css/grid.css">
+  <link rel="stylesheet" href="../../static/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet"> {% block
+  title %} {% endblock title %}
+
+</head>
+
+<body>
+  <section id="navbar-top">
+    <div class="navbar">
+      <div class="logo-icons">
+        <div class="social">
+          <ul>
+            <li><a href="https://www.facebook.com/envato"><i class="fab fa-facebook-f"
+                  style="color:#175BEB; font-size: 22px; width: 14px; height: 24px; "></i></a></li>
+            <li><a href="https://twitter.com/envato"><i class="fab fa-twitter"
+                  style="color: #1DA1F2; font-size: 22px; width: 14px; height: 24px;"></i></a></li>
+            <li><a href="https://instagram.com/envato"><i class="fab fa-instagram"
+                  style="color:rgb(242,40,177); font-size: 22px; width: 14px; height: 24px;"></i></a></li>
+          </ul>
         </div>
-      </div>
-      <div class="widgets">
-        <div class="row">
-          <div class="popular">
-            <div class="title">
-              <h4>Popular Posts</h4>
-              <span></span>
-            </div>
-            <div class="post">
-              <a href="#"><img src="././static/img/post1.jpg" alt=""></a>
-              <div class="info">
-                <a href="#"><h4>3 ideas to keep you healthy and strong</h4></a>
-                <div class="datetime">
-                  <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
-                  <span>July 25, 2019</span>
-                </div>
-              </div>
-            </div>
-            <div class="post">
-              <a href="#"><img src="././static/img/post2.jpg" alt=""></a>
-              <div class="info">
-                <a href="#"><h4>Far far away, behind the word mountains</h4></a>
-                <div class="datetime">
-                  <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
-                  <span>August 15, 2019</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="menu">
-            <div class="title">
-              <h4>Menu</h4>
-              <span></span>
-            </div>
-            <div class="menu-footer">
-              <ul>
-                <li><a href='{{url_for("main")}}'>Home</a></li>
-                <li><a href='{{url_for("author")}}'>Author</a></li>
-                <li><a href='{{url_for("contact")}}'>Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="gallery">
-            <div class="title">
-              <h4>Gallery</h4>
-              <span></span>
-            </div>
-            <div class="imgs">
-              <ul>
-                <li>
-                  <a href="././static/img/gallery1.jpg"><img src="././static/img/gallery1.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="././static/img/gallery2.jpg"><img src="././static/img/gallery2.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="././static/img/4.jpg"><img src="././static/img/4.jpg" alt=""></a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="././static/img/gallery4.jpg"><img src="././static/img/gallery4.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="././static/img/gallery5.jpg"><img src="././static/img/gallery5.jpg" alt=""></a>
-                </li>
-                <li>
-                  <a href="././static/img/post3.jpg"><img src="././static/img/post3.jpg" alt=""></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="logo-footer">
         <div class="logo">
           <div class="title">
-            <a href="./home.html"><h2>Veen</h2></a>
+            <h1><a href='{{url_for("main")}}'>Veen</a></h1>
             <span></span>
           </div>
         </div>
-        <div class="rights">
-          <p>© 2021 Veen. All rights reserved.</p>
+        <div class="search">
+          <div class="input-group">
+            <div class="form-outline">
+              <input type="search" id="form1" class="form-control" placeholder="Search" style="border-radius: 25px;">
+            </div>
+            <button type="button" class="btn btn-primary"
+              style="background-color: #FF486A; border-color: #FF486A; border-radius: 50%; margin-left: 5px;">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
         </div>
       </div>
-    </section>
-    
-    {% block js %}
-      
-    {% endblock js %}
-      
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script></body>
+      <div class="menu">
+        <ul>
+          <li><a href='{{url_for("main")}}'>Home</a></li>
+          <li><a href='{{url_for("author")}}'>Author</a></li>
+          <li><a href='{{url_for("contact")}}'>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {% block page %} {% endblock page %}
+
+  <section id="footer">
+    <div class="subscribe">
+      <div class="content">
+        <div class="text">
+          <div class="title">
+            <h4>Subscribe to Veen</h4>
+            <span></span>
+          </div>
+          <p>Get the latest posts delivered right to your email.</p>
+        </div>
+        <div class="email">
+          <div class="form">
+            <form style="display: flex;">
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Enter your email address">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="widgets">
+      <div class="row">
+        <div class="popular">
+          <div class="title">
+            <h4>Recent Posts</h4>
+            <span></span>
+          </div>
+
+          {% for a in ennd %}
+          <div class="post">
+            <a href="/post/{{a.id}}"><img src="{{a.img}}" alt=""></a>
+            <div class="info">
+              <a href="/post/{{a.id}}">
+                <h4>{{a.title}}</h4>
+              </a>
+              <div class="datetime">
+                <i class="far fa-clock" style="width: 17px; height: 17px; color: #FF486A;"></i>
+                <span>{{a.date}}</span>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="menu">
+          <div class="title">
+            <h4>Menu</h4>
+            <span></span>
+          </div>
+          <div class="menu-footer">
+            <ul>
+              <li><a href='{{url_for("main")}}'>Home</a></li>
+              <li><a href='{{url_for("author")}}'>Author</a></li>
+              <li><a href='{{url_for("contact")}}'>Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="title">
+            <h4>Gallery</h4>
+            <span></span>
+          </div>
+          <div class="imgs">
+            <ul>
+              <li>
+                <a href="../../static/img/gallery1.jpg"><img src="../../static/img/gallery1.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="../../static/img/gallery2.jpg"><img src="../../static/img/gallery2.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="../../static/img/4.jpg"><img src="../../static/img/4.jpg" alt=""></a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="../../static/img/gallery4.jpg"><img src="../../static/img/gallery4.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="../../static/img/gallery5.jpg"><img src="../../static/img/gallery5.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="../../static/img/post3.jpg"><img src="../../static/img/post3.jpg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-footer">
+      <div class="logo">
+        <div class="title">
+          <a href="./home.html">
+            <h2>Veen</h2>
+          </a>
+          <span></span>
+        </div>
+      </div>
+      <div class="rights">
+        <p>© 2021 Veen. All rights reserved.</p>
+      </div>
+    </div>
+  </section>
+
+  {% block js %} {% endblock js %}
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+    crossorigin="anonymous"></script>
+</body>
 
 </html>
