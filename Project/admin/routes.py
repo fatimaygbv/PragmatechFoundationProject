@@ -17,12 +17,12 @@ def admin_new_blog():
         file=request.files['img']
         filename=secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_PATH'],filename))
-        filePath=f"/{app.config['UPLOAD_PATH']}{filename}"
+        filePath=f"/{app.config['UPLOAD_PATH']}/{filename}"
         post=Blog(
             title=request.form['title'],
             text=request.form['text'],
             img=filePath,
-            min_read=request.form['min_read'],)
+            min_read=request.form['min_read'])
         db.session.add(post)
         db.session.commit()
         redirect ('/admin')

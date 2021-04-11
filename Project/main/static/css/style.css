@@ -241,7 +241,7 @@ body {
   font-family: "Josefin Sans",sans-serif;
   margin: 0px;
   width: 1349px;
-  height: auto;
+  height: 1425px;
   padding: 0px 20px;
 }
 
@@ -263,7 +263,7 @@ body {
 }
 
 #grid-container .grid .left-grid .grid-top .row {
-  height: auto;
+  height: 550px;
   margin: 0px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,7 +282,7 @@ body {
 }
 
 #grid-container .grid .left-grid .grid-top .row .grid-posts .grid-item {
-  height: auto;
+  height: 500px;
   width: 462px;
   padding: 0px 20px;
   padding-bottom: 50px;

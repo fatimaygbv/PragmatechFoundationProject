@@ -1,119 +1,49 @@
 {% extends 'main/base.html' %}
 
 {% block page %}
-    <section id="slider">
-      <div class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="blog-name">
-                <div class="info">
-                  <a href="#"><h1>Far far away, behind the word mountains</h1></a>
-                  <div class="date-min">
-                    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 11px; margin-left: 2px;"></span>
-                    <div class="date">
-                      <span>August 15, 2019</span>
-                    </div>
-                    <div class="min-read">
-                      <span>3</span>
-                      <p>Min Read</p>
-                    </div>
-                  </div>
+<section id="slider">
+  <div class="container">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        {% for blog in blog %}
+        <div class="carousel-item active">
+          <div class="blog-name">
+            <div class="info">
+              <a href="/blog/{{blog.id}}"><h1>{{blog.title}}</h1></a>
+              <div class="date-min">
+                <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 11px; margin-left: 2px;"></span>
+                <div class="date">
+                  <span>{{blog.date}}</span>
+                </div>
+                <div class="min-read">
+                  <span>{{blog.min_read}}</span>
+                  <p>Min Read</p>
                 </div>
               </div>
-              <img src="././static/img/1.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 500px; object-fit:cover;">
-            </div>
-            <div class="carousel-item">
-              <div class="blog-name">
-                <div class="info">
-                  <a href="#"><h1>Musical improvisation is the spontaneous music</h1></a>
-                  <div class="date-min">
-                    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 11px; margin-left: 2px;"></span>
-                    <div class="date">
-                      <span>July 26, 2019</span>
-                    </div>
-                    <div class="min-read">
-                      <span>1</span>
-                      <p>Min Read</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <img src="././static/img/2.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 500px;" style="object-fit:cover;">
-            </div>
-            <div class="carousel-item">
-              <div class="blog-name">
-                <div class="info">
-                  <a href="#"><h1>A small river named Duden flows by their place</h1></a>
-                  <div class="date-min">
-                    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 11px; margin-left: 2px;"></span>
-                    <div class="date">
-                      <span>July 25, 2019</span>
-                    </div>
-                    <div class="min-read">
-                      <span>1</span>
-                      <p>Min Read</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <img src="././static/img/3.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 500px;" style="object-fit:cover;">
-            </div>
-            <div class="carousel-item">
-              <div class="blog-name">
-                <div class="info">
-                  <a href="#"><h1>5 Spanish Cities that will make you fall in Love</h1></a>
-                  <div class="date-min">
-                    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 11px; margin-left: 2px;"></span>
-                    <div class="date">
-                      <span>July 25, 2019</span>
-                    </div>
-                    <div class="min-read">
-                      <span>1</span>
-                      <p>Min Read</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <img src="././static/img/4.1.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 500px;" style="object-fit:cover;">
-            </div>
-            <div class="carousel-item">
-              <div class="blog-name">
-                <div class="info">
-                  <a href="#"><h1>Top 10 old rock songs from the 80’s</h1></a>
-                  <div class="date-min">
-                    <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 11px; margin-left: 2px;"></span>
-                    <div class="date">
-                      <span>June 25, 2019</span>
-                    </div>
-                    <div class="min-read">
-                      <span>1</span>
-                      <p>Min Read</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <img src="././static/img/4.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 500px;" style="object-fit:cover;">
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </a>
+          <img src="{{blog.img}}" class="d-block w-100" alt="..." style="width: 100%; height: 500px; object-fit:cover;">
         </div>
+        {% endfor %}
       </div>
-    </section>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+  </div>
+</section>
     <section id="grid-container">
       <div class="grid">
         <div class="left-grid">
           <div class="grid-top">
             <div class="row">
-              <div class="grid-posts">
-                {% for blog in blog %}
+              {% for blog in blog %}
+              <div class="grid-posts" style="width: 50%; height: 500px;">
                 <div class="grid-item">
                   <div class="header">
                     <div class="text">
@@ -133,7 +63,7 @@
                         </div>
                       </div>
                     </div>
-                    <a href="/blog/{{blog.id}}"><img src="{{blog.img}}" alt="" style="cursor: pointer;"></a>
+                    <a href="/blog/{{blog.id}}"><img src="{{blog.img}}" alt="" style="cursor: pointer; width: 100%;"></a>
                   </div>
                   <div class="coma-date">
                     <span style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 10px; margin-left: 2px;"></span>
@@ -142,14 +72,8 @@
                     </div>
                   </div>
                 </div>
-                {% endfor %}
               </div>
-            </div>
-          </div>
-          <div class="button-n">
-            <div class="nav">
-              <span class="page-number">Page 1 of 2</span>
-              <a href="./home-2.html"><button class="button" style="width: 76px; height: 36px; color: #fff; border-radius: 25px; border: 0px; background-color: #FF486A; box-shadow: 0px 3px 6px rgb(0 0 0 / 30%); outline: none;">Next</button></a>
+              {% endfor %}
             </div>
           </div>
         </div>

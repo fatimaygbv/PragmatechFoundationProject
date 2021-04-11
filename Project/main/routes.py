@@ -12,9 +12,10 @@ def main():
 def author():
     return render_template('main/author.html')     
 
-@app.route("/post")
+@app.route("/post/<id>")
 def post():
-    return render_template('main/post.html')       
+    blog = Blog.query.all()
+    return render_template('main/post.html',blog=blog)       
 
 @app.route("/contact",methods=['GET','POST'])
 def contact():
