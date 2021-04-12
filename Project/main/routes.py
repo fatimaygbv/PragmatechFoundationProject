@@ -27,7 +27,7 @@ def post(id):
         comment_p=Comments(name=name, email=email, comment=comment,blog_id=id)
         db.session.add(comment_p)
         db.session.commit()
-        return redirect('/')
+        return redirect(f'/post/{id}')
     return render_template('main/post.html',blog=blog,ennd=end)       
 
 @app.route("/contact",methods=['GET','POST'])

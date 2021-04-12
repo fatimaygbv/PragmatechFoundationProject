@@ -33,6 +33,12 @@ def admin_comments():
     comments=Comments.query.all()
     return render_template('admin/comments.html',comments=comments)     
 
+@admin_bp.route("/commentdelete/<id>")    
+def commentDelete(id):
+    db.session.delete(Comments.query.get(id))
+    db.session.commit()
+    return redirect ('/admin/comments')
+
 @admin_bp.route("/contact-form")
 def admin_contact_form():
     contact=Contact.query.all()
@@ -54,8 +60,28 @@ def blogDelete(id):
 
 @admin_bp.route("/ads")
 def admin_ads():
-    return render_template('admin/ads.html')      
+    ads=Ads.query.all()
+    return render_template('admin/ads.html',ads=ads)      
 
-@admin_bp.route("/new-ad")
+@admin_bp.route("/new-ad",methods=['GET','POST'])
 def admin_new_ad():
+    if request.method=='POST':
+        file=request.files['img']
+        filename=secure_filename(file.filename)
+        file.save(os.path.join(app.config['UPLOAD_PATH'],filename))
+        filePath=f"/{app.config['UPLOAD_PATH']}/{filename}"
+        ad=Ads(
+            name=request.form['name'],
+            img=filePath,
+            url=request.form['url']
+        )
+        db.session.add(ad)
+        db.session.commit()
+        return redirect ('/admin/new-ad')
     return render_template('admin/new_ad.html')
+
+# @admin_bp.route("/addelete/<id>")    
+# def adDelete(id):
+#     db.session.delete(Ads.query.get(id))
+#     db.session.commit()
+#     return redirect ('/admin/ads')    

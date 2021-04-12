@@ -19,14 +19,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for comment in comment_p %}
+                            {% for comment in comments %}
                             <tr>
                                 <th scope="row">{{comment.id}}</th>
                                 <td>{{comment.name}}</td>
                                 <td>{{comment.email}}</td>
                                 <td>{{comment.comment}}</td>
                                 <td>
-                                    <a href="delete/{{comment.id}}"><i class="fas fa-trash"></i></a>
+                                    <a href="commentdelete/{{comment.id}}"><i class="fas fa-trash"></i></a>
                                 </td>
                             </tr>
                             {% endfor %}

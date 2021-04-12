@@ -10,26 +10,26 @@
                 <h4 class="header-title mt-0">All Ads</h4>
                 <div class="table-responsive-sm">
                     <table class="table mb-0">
-                        <caption>List of users</caption>
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Image</th>
+                                <th scope="col">URL</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                            {% for ad in ads %}
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
+                                <th scope="row">{{ad.id}}</th>
+                                <td>{{ad.name}}</td>
+                                <td>{{ad.img}}</td>
+                                <td>{{ad.url}}</td>
+                                <td>
+                                    <a href="addelete/{{post.id}}"><i class="fas fa-trash"></i></a>
+                                </td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table><!--end /table-->
                 </div><!--end /tableresponsive-->
