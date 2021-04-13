@@ -241,7 +241,7 @@ body {
   font-family: "Josefin Sans",sans-serif;
   margin: 0px;
   width: 1349px;
-  height: 1425px;
+  height: 1300px;
   padding: 0px 20px;
 }
 
@@ -3240,7 +3240,7 @@ body {
   padding: 7px 12px;
 }
 
-#footer .subscribe .content .email .form button {
+#footer .subscribe .content .email button {
   max-width: 27%;
   height: 45px;
   font-size: 15px;

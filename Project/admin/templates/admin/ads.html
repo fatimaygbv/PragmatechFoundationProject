@@ -13,6 +13,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">Name</th>
                                 <th scope="col">Image</th>
                                 <th scope="col">URL</th>
                                 <th scope="col">Action</th>
@@ -26,7 +27,7 @@
                                 <td>{{ad.img}}</td>
                                 <td>{{ad.url}}</td>
                                 <td>
-                                    <a href="addelete/{{post.id}}"><i class="fas fa-trash"></i></a>
+                                    <a href="addelete/{{ad.id}}"><i class="fas fa-trash"></i></a>
                                 </td>
                             </tr>
                             {% endfor %}

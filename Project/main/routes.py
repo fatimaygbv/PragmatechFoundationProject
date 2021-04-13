@@ -8,7 +8,8 @@ def main():
     blog = Blog.query.all()
     endBlogs = db.session.query(Blog).order_by(Blog.id.desc()).limit(3)
     end = db.session.query(Blog).order_by(Blog.id.desc()).limit(2)
-    return render_template('main/home.html',blog=blog,endBlogs=endBlogs,ennd=end)    
+    ads=Ads.query.get(1)
+    return render_template('main/home.html',blog=blog,endBlogs=endBlogs,ennd=end,ad=ads)    
 
 @app.route("/author")
 def author():
@@ -19,6 +20,7 @@ def author():
 def post(id):
     blog=Blog.query.get(id)
     end = db.session.query(Blog).order_by(Blog.id.desc()).limit(2)
+    endcom = db.session.query(Comments).order_by(Comments.id.desc()).limit(2)
     if request.method=='POST':
         name=request.form['name']
         email=request.form['email']
@@ -28,7 +30,7 @@ def post(id):
         db.session.add(comment_p)
         db.session.commit()
         return redirect(f'/post/{id}')
-    return render_template('main/post.html',blog=blog,ennd=end)       
+    return render_template('main/post.html',blog=blog,ennd=end,enndcom=endcom)       
 
 @app.route("/contact",methods=['GET','POST'])
 def contact():

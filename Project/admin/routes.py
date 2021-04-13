@@ -25,8 +25,8 @@ def admin_new_blog():
             min_read=request.form['min_read'])
         db.session.add(post)
         db.session.commit()
-        redirect ('/admin')
-    return render_template('admin/new_blog.html')      
+        return redirect ('/admin')
+    return render_template('admin/new_blog.html') 
 
 @admin_bp.route("/comments")
 def admin_comments():
@@ -80,8 +80,8 @@ def admin_new_ad():
         return redirect ('/admin/new-ad')
     return render_template('admin/new_ad.html')
 
-# @admin_bp.route("/addelete/<id>")    
-# def adDelete(id):
-#     db.session.delete(Ads.query.get(id))
-#     db.session.commit()
-#     return redirect ('/admin/ads')    
+@admin_bp.route("/addelete/<id>")    
+def adDelete(id):
+    db.session.delete(Ads.query.get(id))
+    db.session.commit()
+    return redirect ('/admin/ads')    

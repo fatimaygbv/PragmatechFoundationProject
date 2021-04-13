@@ -63,6 +63,27 @@
             <input type="submit" class="btn btn-danger" value="Post Comment" style="margin-top: 20px;">
           </div>
         </form>
+        <div class="comments" style="margin-top: 20px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                {% for endcom in enndcom %}
+                <div class="ncomment" style="border: 1px solid #eee; padding-top: 15px; height: 50px; display: flex; border-radius: 25px;  margin-right: 20px; margin-bottom: 10px;">
+                  <div class="name" style="display: flex;">
+                    <span
+                      style="background-color: #FF486A; border-radius: 50%; height: 5px; width: 5px; margin-top: 5px; margin-left: 20px;"></span>
+                      <h6 style="color: black; margin-left: 10px;">{{endcom.name}}</h6>
+                  </div>
+                  <div class="message" style="display: flex; height: 35px; margin-left: 70px; margin-right: 20px;">
+                    <div class="tire" style="margin: 0px 10px;"><span>-</span></div>
+                    <div class="text" style=" margin: 0px;"><span>{{endcom.comment}}</span></div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="separator"></div>
