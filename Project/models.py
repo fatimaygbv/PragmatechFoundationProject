@@ -20,7 +20,7 @@ class Blog(db.Model):
     title=db.Column(db.String(120))
     text=db.Column(db.String(120))
     img=db.Column(db.String(120))
-    date=db.Column(db.DateTime,default=datetime.now())
+    date=db.Column(db.String,default=datetime.now().strftime('%d %B %Y'))
     min_read=db.Column(db.String(50))
     comment=db.relationship('Comments',backref='blog',lazy=True) 
 
